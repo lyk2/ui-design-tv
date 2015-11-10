@@ -66,9 +66,9 @@
     <div class="container">
         <body>
             <h1>Please select account</h1>
-            <button type="button" class="btn btn-default">Chequings</button>
-            <button type="button" class="btn btn-default">Savings</button>
-            <button type="button" class="btn btn-default">Credit Card</button>
+            <button id="chequings" type="button" class="btn btn-default">Chequings</button>
+            <button id="savings" type="button" class="btn btn-default">Savings</button>
+            <button id="credit" type="button" class="btn btn-default">Credit Card</button>
         </body>
 
     </div>
@@ -79,6 +79,36 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $("#chequings").click(function() {
+            var action=localStorage.getItem('action');
+            localStorage.setItem("account", "Chequings");
+            localStorage.removeItem('action');
+            window.location.href=getActionURL(action);
+        })
+
+        $("#savings").click(function() {
+            var action=localStorage.getItem('action');
+            localStorage.setItem("account", "Savings");
+            localStorage.removeItem('action');
+            window.location.href=getActionURL(action);
+        })
+
+        $("#credit").click(function() {
+            var action=localStorage.getItem('action');
+            localStorage.setItem("account", "Credit");
+            localStorage.removeItem('action');
+            window.location.href=getActionURL(action);
+        })
+
+        function getActionURL(action) {
+            switch (action) {
+                case "accHistory":
+                    return "accounts.html";
+
+            }
+        }
+    </script>
 
     <script>
     setInterval(function() {

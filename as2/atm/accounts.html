@@ -69,8 +69,7 @@
                 <h1>
                    Account:
                 </h1>
-                <h2>
-                    Chequings
+                <h2 id="account">
                 </h2>
             </div>
             <div class="col-xs-6">
@@ -80,6 +79,10 @@
                 <h2 id="balance">
                 </h2>
             </div>
+          </div>
+                <h1>
+                   Transactions:
+                </h1>
           </div>
 
     </div>
@@ -92,6 +95,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script>
         $("#balance").text(localStorage.getItem("balance"))
+        $("#account").text(localStorage.getItem("account"))
     </script>
 
     <script>
