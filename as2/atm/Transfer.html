@@ -13,6 +13,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/atm.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -45,16 +47,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" >Bank Of Money</a>
+            <a class="navbar-brand">Bank Of Money</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav" style="float:right">
                 <li>
-                    <a href="#">Time:2:30</a>
+                    <a id="livetime"></a>
                 </li>
                 <li>
-                    <a href="#">Help</a>
+                    <a href="#" id="help">Request Help</a>
                 </li>
             </ul>
         </div>
@@ -66,88 +68,143 @@
 <!-- Page Content -->
 <div class="container">
 
-    <div class="col-lg-12 text-center">
-        <h1>Welcome to the Bank of Money</h1>
+    <div class="col-lg-12 text-center" style="margin-bottom:100px">
+        <h1>Transfer Funds</h1>
     </div>
-    <div class="row" style="height: 40px"></div>
-    <div class="dropdown col-lg-12 text-center" >
-        <button class="btn btn-primary dropdown-toggle" id="FromAccount"  style="width: 600px" type="button" data-toggle="dropdown">From Account
+    <div class="dropdown col-lg-12 text-center" style="margin-bottom:50px">
+        <button class="btn btn-primary dropdown-toggle" id="FromAccount" style="width: 600px" type="button"
+                data-toggle="dropdown">From Account
             <span class="caret"></span></button>
-        <ul class="dropdown-menu" style="margin-left: 60px; width: 600px">
+        <ul class="dropdown-menu" style="width: 600px;left: 50%;right: auto;transform: translate(-50%, 0);">
             <li><a id="FromChequing" href="#">Chequing</a></li>
             <li><a id="FromSaving" href="#">Saving</a></li>
-            <li><a id="FromVisa" href="#">Visa</a></li>
+            <li><a id="FromCreditCard" href="#">Credit Card</a></li>
         </ul>
     </div>
-    <div class="row" style="height: 40px"></div>
-    <div class="dropdown col-lg-12 text-center">
-        <button class="btn btn-primary dropdown-toggle" style="width: 600px" id="ToAccount" type="button" data-toggle="dropdown">To Account
-
+    <div class="dropdown col-lg-12 text-center" style="margin-bottom:50px">
+        <button class="btn btn-primary dropdown-toggle" style="width: 600px" id="ToAccount" type="button"
+                data-toggle="dropdown">To Account
             <span class="caret"></span></button>
-        <ul class="dropdown-menu" style="margin-left: 60px;width: 600px">
+        <ul class="dropdown-menu" style="width: 600px;left: 50%;right: auto;transform: translate(-50%, 0);">
             <li><a id="ToChequing" href="#">Chequing</a></li>
-            <li><a id="ToSaving"  href="#">Saving</a></li>
-            <li><a id="ToVisa"  href="#">Visa</a></li>
+            <li><a id="ToSaving" href="#">Saving</a></li>
+            <li><a id="ToCreditCard" href="#">Credit Card</a></li>
         </ul>
     </div>
-    <div class="row">
-        <div class="col-xs-12 text-right">
-            <div class="btn-group" role="group" aria-label="Basic example">
-                <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
-                <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
-            </div>
-        </div>
+    <div class="col-lg-12 text-center">
+        <input type="text" class="textfield" id="amount" placeholder="Enter Amount"
+               style="height:auto;border:1px solid #000000" onkeypress="return isValidAmount(event)"/>
+        <button class="btn btn-primary" type="button" id="transfer">Transfer</button>
     </div>
-
 
 
 </div>
 <!-- /.container -->
 
 
-
 <!-- jQuery Version 1.11.1 -->
+
 <script src="js/jquery.js"></script>
+<script src="js/jquery.form-validator.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js">
+<script src="js/bootstrap.min.js"></script>
+<script src="js/atm.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript">
+    //scripts go here
 
-</script>
-<script>
-    $("#ToChequing").click(function() {
+
+    $("#ToChequing").click(function () {
         $("#ToAccount").text("Chequing");
-        console.log("this")
+        removeFromAccount();
     })
-    $("#ToSaving").click(function() {
+    $("#ToSaving").click(function () {
         $("#ToAccount").text("Saving");
-        console.log("this")
+        removeFromAccount();
     })
-    $("#ToVisa").click(function() {
-        $("#ToAccount").text("Visa");
-        console.log("this")
+    $("#ToCreditCard").click(function () {
+        $("#ToAccount").text("Credit Card");
+        removeFromAccount();
     })
-    $("#FromChequing").click(function() {
+    $("#FromChequing").click(function () {
         $("#FromAccount").text("Chequing");
-        console.log("this")
+        removeToAccount();
     })
-    $("#FromSaving").click(function() {
+    $("#FromSaving").click(function () {
         $("#FromAccount").text("Saving");
-        console.log("this")
+        removeToAccount();
     })
-    $("#FromVisa").click(function() {
-        $("#FromAccount").text("Visa");
-        console.log("this")
+    $("#FromCreditCard").click(function () {
+        $("#FromAccount").text("Credit Card");
+        removeToAccount();
     })
-    $("#back").click(function() {
-        localStorage.setItem('action', 'back');
-        window.location.href="welcome.html";
-    });
-    $("#exit").click(function() {
-        localStorage.setItem('action', 'exit');
-        window.location.href="exit.html";
+    function removeToAccount() {
+        if ($("#FromAccount").text() == "Chequing") {
+            $("#ToSaving").removeClass('hidden');
+            $("#ToCreditCard").removeClass('hidden');
+            $("#ToChequing").addClass('hidden');
+        } else if ($("#FromAccount").text() == "Saving") {
+            $("#ToSaving").addClass('hidden');
+            $("#ToCreditCard").removeClass('hidden');
+            $("#ToChequing").removeClass('hidden');
+        } else if ($("#FromAccount").text() == "Credit Card") {
+            $("#ToSaving").removeClass('hidden');
+            $("#ToCreditCard").addClass('hidden');
+            $("#ToChequing").removeClass('hidden');
+        }
+    }
+
+    function removeFromAccount() {
+        if ($("#ToAccount").text() == "Chequing") {
+            $("#FromSaving").removeClass('hidden');
+            $("#FromCreditCard").removeClass('hidden');
+            $("#FromChequing").addClass('hidden');
+        } else if ($("#ToAccount").text() == "Saving") {
+            $("#FromSaving").addClass('hidden');
+            $("#FromCreditCard").removeClass('hidden');
+            $("#FromChequing").removeClass('hidden');
+        } else if ($("#ToAccount").text() == "Credit Card") {
+            $("#FromSaving").removeClass('hidden');
+            $("#FromCreditCard").addClass('hidden');
+            $("#FromChequing").removeClass('hidden');
+        }
+    }
+
+    $("#transfer").click(function () {
+        var amount = $("#amount").val();
+        var fromAccount = $("#FromAccount").text();
+        var toAccount = $("#ToAccount").text();
+        if (fromAccount.indexOf("From Account")!=-1) {
+            if (toAccount.indexOf("To Account")!=-1) {
+                dialogAlert("Alert", "Please select accounts to transfer from and to");
+                return;
+            } else {
+                dialogAlert("Alert", "Please select an account to transfer fund from.");
+                return;
+            }
+        } else if (toAccount.indexOf("To Account")!=-1) {
+            dialogAlert("Alert", "Please select an account to transfer fund to.");
+            return;
+        }
+        var intchecker = new RegExp(/^[0-9]+(\.[0-9][0-9])?$/);
+        if (!intchecker.test(amount)) {
+            dialogAlert("Alert", "Please enter amount in proper format e.g. 10.13", function () {
+                $("#amount").val("")
+            });
+        } else {
+            localStorage.setItem(account + "-balance", parseFloat(balance) + parseFloat(total));
+            localStorage.setItem("action", "deposit_receipt.html");
+            localStorage.setItem("deposit-total", total);
+            location.href = "transaction.html";
+        }
     });
 
 </script>
+
 </body>
 
 </html>
+
+
+
