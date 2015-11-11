@@ -93,7 +93,7 @@
                 <button id="exchange" class="btn btn-default action-button">International Exchange</button>
             </p>
             <p>
-                <button class="btn btn-default action-button">Something</button>
+                <button id="pinchanger" class="btn btn-default action-button">Pin Changer</button>
             </p>
         </div>
       </div>
@@ -124,7 +124,7 @@
         });
 
          $("#deposit").click(function() {
-            localStorage.setItem('action', 'deposit_insert.html');
+            localStorage.setItem('action', 'deposit_insertl.html');
             window.location.href="selectAccount.html";
         });
 
@@ -141,6 +141,10 @@
         $("#exchange").click(function() {
             localStorage.setItem('action', 'exchange.html');
             window.location.href="selectAccount.html";
+        });
+
+        $("#pinchanger").click(function() {
+            window.location.href="pinchanger.html";
         });
 
         $("#back").click(function() {
