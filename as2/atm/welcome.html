@@ -69,7 +69,7 @@
 
     <div class="row">
         <div class="col-xs-12 text-center">
-            <h2>Please select an action</h2>
+            <h1>Please select an action</h1>
         </div>
     </div>
 
@@ -124,7 +124,7 @@
         });
 
          $("#deposit").click(function() {
-            localStorage.setItem('action', 'deposit_insert.html');
+            localStorage.setItem('action', 'deposit.html');
             window.location.href="selectAccount.html";
         });
 
@@ -141,11 +141,6 @@
         $("#exchange").click(function() {
             localStorage.setItem('action', 'exchange.html');
             window.location.href="selectAccount.html";
-        });
-
-        $("#back").click(function() {
-            localStorage.setItem('action', 'back');
-            window.location.href="welcome.html";
         });
 
         $("#exit").click(function() {

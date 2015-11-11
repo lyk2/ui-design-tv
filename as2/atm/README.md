@@ -25,3 +25,4 @@ Design Decisions:
 # Ability to print receipts
 # Display transactions in "Account History"
 # International Currency Exchange
+# Password input is not visible
