@@ -98,6 +98,14 @@
       </span>
     </div>
     </div>
+    <div class="row">
+            <div class="col-xs-12 text-right">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
+                    <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /.container -->
     
@@ -112,6 +120,17 @@
     <script src="js/jquery-ui.js"></script>
     <script src="js/atm.js"></script>
 
+    <script type="text/javascript">
+        $("#back").click(function() {
+            localStorage.setItem('action', 'back');
+            window.location.href="welcome.html";
+        });
+        $("#exit").click(function() {
+            localStorage.setItem('action', 'exit');
+            window.location.href="exit.html";
+        });
+    </script>
+
     <script>
         var account = localStorage.getItem("account");
         var balance = localStorage.getItem(account+"-balance");
@@ -121,7 +140,7 @@
             var total = $("#total").val();
             var intchecker = new RegExp(/^[0-9]+(.[0-9][0-9])?$/);
             if (!intchecker.test(total)) {
-                dialogAlert("Alert", "Please enter in amount in proper format e.g. 10.13", function(){$("#total").val("")});
+                dialogAlert("Alert", "Please enter amount in proper format e.g. 10.13", function(){$("#total").val("")});
             } else {
                 localStorage.setItem(account+"-balance", parseFloat(balance) + parseFloat(total));
                 localStorage.setItem("action", "deposit_receipt.html");

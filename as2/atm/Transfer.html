@@ -90,6 +90,14 @@
             <li><a id="ToVisa"  href="#">Visa</a></li>
         </ul>
     </div>
+    <div class="row">
+        <div class="col-xs-12 text-right">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
+                <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -130,6 +138,14 @@
         $("#FromAccount").text("Visa");
         console.log("this")
     })
+    $("#back").click(function() {
+        localStorage.setItem('action', 'back');
+        window.location.href="welcome.html";
+    });
+    $("#exit").click(function() {
+        localStorage.setItem('action', 'exit');
+        window.location.href="exit.html";
+    });
 
 </script>
 </body>
