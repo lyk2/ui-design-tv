@@ -74,7 +74,7 @@
 
     <div class="row">
         <div class="col-xs-12 text-center">
-            <h2>Please Select an action</h2>
+            <h2>Please select an action</h2>
         </div>
     </div>
 
@@ -95,12 +95,21 @@
                 <button class="btn btn-default action-button">Transfer Money</button>
             </p>
             <p>
-                <button class="btn btn-default action-button">international Exchange</button>
+                <button class="btn btn-default action-button">International Exchange</button>
             </p>
             <p>
                 <button class="btn btn-default action-button">Something</button>
             </p>
         </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 text-right">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button id="exit" type="button" class="btn btn-default btn-secondary">Exit</button>
+            </div>
+        </div>
+          
       </div>
 
     </div>
@@ -120,6 +129,11 @@
         $("#deposit").click(function() {
             localStorage.setItem('action', 'deposit');
             window.location.href="selectAccount.html";
+        });
+
+        $("#exit").click(function() {
+            localStorage.setItem('action', 'exit');
+            window.location.href="exit.html";
         });
     </script>
 
