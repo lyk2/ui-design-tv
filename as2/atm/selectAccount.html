@@ -20,6 +20,12 @@
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     }
+    .action-button {
+        width:300px;
+        height:75px;
+        margin:20px;
+        font-size:25px;
+    }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -64,12 +70,15 @@
 
     <!-- Page Content -->
     <div class="container">
-        <body>
-            <h1>Please select account</h1>
-            <button id="chequings" type="button" class="btn btn-default">Chequings</button>
-            <button id="savings" type="button" class="btn btn-default">Savings</button>
-            <button id="credit" type="button" class="btn btn-default">Credit Card</button>
-        </body>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+            <h1 style="margin-bottom:10%">Please select account</h1>
+            <button id="chequings" type="button" class="btn btn-default action-button">Chequings</button>
+            <button id="savings" type="button" class="btn btn-default action-button">Savings</button>
+            <button id="credit" type="button" class="btn btn-default action-button">Credit Card</button>
+            </div>
+       
+        </div>
 
     </div>
     <!-- /.container -->
