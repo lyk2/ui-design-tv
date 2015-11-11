@@ -64,12 +64,13 @@
 
     <!-- Page Content -->
     <div class="container">
-        <h2>Deposit Cash/Cheques Below</h2>
         <body>
-            <img src="images/insertcash.jpg" width="30%" height="auto" title="insertcash"/>
+            <h1> Deposit </h1>
+            <img src="images/insertCash.jpg" width="15%" title="cancelDeposit"/>
+            <div>
 
-    <div class="row">
-            <div class="col-xs-6">
+            </div>
+     <div class="col-xs-6">
                 <p>
                     <h3>Account</h3>
                 </p>
@@ -79,34 +80,38 @@
             </div>
             <div class="col-xs-6">
                 <p>
-                    <h3 id="account"/><!-- change to local storage after, see script-->
+                    <h3 id="account">
                 </p>
                 <p>
-                    <h3 id="balance"/>
+                    <h3 id="balance">
                 </p>
-            </div>
-
-    </div>
-    
-    <div class="input-group">
-        <span class="input-group-btn">
-            <button type="button" class="btn btn-default" onclick="myFunction()">Confirm ammount</button>
-        </span>
+         </div>
+         <br>
+       <h1>
         <input type="text" name="depositvalue" value="0.00">
-    </div><!-- /input-group -->
-
-        <button type="button" class="btn btn-default" onclick='window.location.href="deposit_confirmation.html"'>Next</button>
+        <button type="button" class="btn btn-default" onclick="myFunction()">Confirm</button>
+      <button type="button" class="btn btn-default" onclick='window.location.href="deposit_confirmation.html"'>Next</button>
+    </h1>
+      
+      </div>
         </body>
-    </div>
     <!-- /.container -->
-    <script>
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+      <script>
         var uh = localStorage.getItem("account");
-        var uhuh = localStorage.getItem("balance");
-        $("#account").text(uh);
-        $("#balance").text(uhuh);
+        $("#account").text(uh)
+        var updateBalance = localStorage.getItem(uh+"-balance");
+        updateBalance = updateBalance + 100;
+        $("#balance").text(updateBalance)
     </script>
 
-    <script>
+ <script>
 
     function myFunction() {
         var input = document.getElementsByName("depositvalue");
@@ -132,11 +137,7 @@
     }
     </script>
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
     <script>
     setInterval(function() {
