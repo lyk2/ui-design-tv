@@ -1,0 +1,9 @@
+.action-button {
+	width:300px;
+	height:75px;
+	margin:20px;
+	font-size:20px;
+}
+.no-close .ui-dialog-titlebar-close {
+ 	display: none;
+}

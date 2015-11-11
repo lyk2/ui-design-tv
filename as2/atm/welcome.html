@@ -13,19 +13,14 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/atm.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
     body {
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    
-    .action-button {
-        width:300px;
-        height:75px;
-        margin:20px;
-        font-size:25px;
     }
     </style>
 
@@ -57,10 +52,10 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav" style="float:right">
                     <li>
-                        <a href="#">Time:2:30</a>
+                        <a href="#" id="livetime"></a>
                     </li>
                     <li>
-                        <a href="#">Help</a>
+                        <a href="#" id="help">Request Help</a>
                     </li>
                 </ul>
             </div>
@@ -120,6 +115,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/atm.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
     <script type="text/javascript">
         $("#accHistory").click(function() {
             localStorage.setItem('action', 'accHistory');
@@ -136,7 +134,6 @@
             window.location.href="exit.html";
         });
     </script>
-
 </body>
 
 </html>
