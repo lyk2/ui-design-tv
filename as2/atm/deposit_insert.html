@@ -98,7 +98,8 @@
       </span>
     </div>
     </div>
-    <div class="row">
+    </div>
+    <div class="row" style="margin-top:50px">
             <div class="col-xs-12 text-right">
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
@@ -106,7 +107,6 @@
                 </div>
             </div>
         </div>
-    </div>
     <!-- /.container -->
     
 
@@ -143,8 +143,13 @@
                 dialogAlert("Alert", "Please enter amount in proper format e.g. 10.13", function(){$("#total").val("")});
             } else {
                 localStorage.setItem(account+"-balance", parseFloat(balance) + parseFloat(total));
-                localStorage.setItem("action", "deposit_receipt.html");
-                localStorage.setItem("deposit-total", total);
+                localStorage.setItem("action", "receipt.html");
+                localStorage.setItem("transaction-type", " Deposit")
+                localStorage.setItem("transaction-amount", total);
+
+                //transaction
+                addTransactionLog(account, "deposit", total, true);
+
                 location.href="transaction.html";
             }          
         });

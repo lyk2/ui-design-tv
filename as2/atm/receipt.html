@@ -68,7 +68,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
-                <h1>Deposit Successfully Completed</h1>
+                <h1>Transaction Successfully Completed</h1>
             </div>
         </div>
         <div class="row">
@@ -79,7 +79,7 @@
                 <h3 style="
     text-decoration: underline;
 ">New Balance: </h3>
-                <h3 style="
+                <h3 id="transaction" style="
     text-decoration: underline;
 ">Deposit Amount: </h3>
                 <h3 style="
@@ -122,7 +122,9 @@
         //scripts go here
         $("#account").text(localStorage.getItem("account"));
         $("#balance").text("$ "+localStorage.getItem(localStorage.getItem("account")+"-balance"));
-        $("#deposit").text("$ "+localStorage.getItem("deposit-total"));
+        $("#deposit").text("$ "+localStorage.getItem("transaction-amount"));
+
+        $("#transaction").text(localStorage.getItem('transaction-type') + " Amount");
 
         var x = Math.floor((Math.random() * 9999) + 1000);
         var y = Math.floor((Math.random() * 9999) + 1000);

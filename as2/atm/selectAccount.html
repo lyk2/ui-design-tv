@@ -13,18 +13,13 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/atm.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
     body {
         padding-top: 70px;
         /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
-    .action-button {
-        width:250px;
-        height:75px;
-        margin:20px;
-        font-size:20px;
     }
     </style>
 
@@ -59,7 +54,7 @@
                         <a id="livetime"></a>
                     </li>
                     <li>
-                        <a href="#" onclick='window.alert("A teller will be on there way shortly, please standby")'>Request Help</a>
+                        <a href="#">Request Help</a>
                     </li>
                 </ul>
             </div>
@@ -80,7 +75,7 @@
        
         </div>
 
-        <div class="row">
+        <div class="row" style="margin-top:80px">
             <div class="col-xs-12 text-right">
                 <div class="btn-group" role="group" aria-label="Basic example">
                     <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
@@ -98,6 +93,9 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/atm.js"></script>
+
     <script type="text/javascript">
         $("#chequings").click(function() {
             var action=localStorage.getItem('action');
@@ -126,25 +124,6 @@
             localStorage.setItem('action', 'exit');
             window.location.href="exit.html";
         });
-    </script>
-
-    <script>
-    setInterval(function() {
-        showtime();
-    }, 6000);
-
-    showtime();
-
-    function showtime() {
-        var d = new Date();
-        time = "am"
-        if (d.getHours()>12) {
-            hours = d.getHours()-12
-            time = "pm"
-        }
-        $("#livetime").text(hours+ ":" + d.getMinutes() + time);
-    }
-
     </script>
 
 </body>

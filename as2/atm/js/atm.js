@@ -25,6 +25,42 @@ function dialogAlert(title, html, action) {
     });
 };
 
+function addTransactionLog(account, type, amount, credit) {
+
+    var log = localStorage.getItem(account+"-log");
+
+    if(!log)
+        log = [];
+    else
+        log = JSON.parse(log);
+
+    var logitem = {
+        type:type,
+        credit:"",
+        debit:"",
+        balance:localStorage.getItem(account+"-balance")
+    };
+
+    var dateObj = new Date();
+    var date = dateObj.getMonth() + "/" + dateObj.getDay() + "/" + dateObj.getFullYear();
+    var time = dateObj.getHours() + ":" + (((dateObj.getMinutes()+"").length == 2 ) ? dateObj.getMinutes() : "0" + dateObj.getMinutes());
+    
+    logitem.date = date;
+    logitem.time = time;
+
+    if (credit){
+        logitem.credit= "" + amount;
+        logitem.newbalance = parseFloat(logitem.balance) + parseFloat(amount);
+    } else {
+        logitem.debit= "" + amount;
+        logitem.newbalance = ParseFloat(logitem.balance) - parseFloat(amount);
+    }
+
+    log.unshift(logitem);
+    
+    localStorage.setItem(account+"-log", JSON.stringify(log));
+}
+
 
 
 
