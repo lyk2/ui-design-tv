@@ -46,7 +46,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Bank Of Money</a>
+                <a class="navbar-brand" >Bank Of Money</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -76,7 +76,7 @@
     <div class="row">
         <div class="col-xs-6 text-center">
             <p>
-                <button class="btn btn-default action-button">Withdraw</button>
+                <button id="withdraw" class="btn btn-default action-button">Withdraw</button>
             </p>
             <p>
                 <button id="deposit" class="btn btn-default action-button">Deposit</button>
@@ -87,10 +87,10 @@
         </div>
         <div class="col-xs-6 text-center">
             <p>
-                <button class="btn btn-default action-button">Transfer Money</button>
+                <button id="transfer" class="btn btn-default action-button">Transfer Money</button>
             </p>
             <p>
-                <button class="btn btn-default action-button">International Exchange</button>
+                <button id="exchange" class="btn btn-default action-button">International Exchange</button>
             </p>
             <p>
                 <button class="btn btn-default action-button">Something</button>
@@ -101,10 +101,9 @@
       <div class="row">
         <div class="col-xs-12 text-right">
             <div class="btn-group" role="group" aria-label="Basic example">
-                <button id="exit" type="button" class="btn btn-default btn-secondary">Exit</button>
+                <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
             </div>
         </div>
-          
       </div>
 
     </div>
@@ -119,14 +118,34 @@
     <script src="js/jquery-ui.js"></script>
 
     <script type="text/javascript">
-        $("#accHistory").click(function() {
-            localStorage.setItem('action', 'accHistory');
+        $("#withdraw").click(function() {
+            localStorage.setItem('action', 'withdraw.html');
             window.location.href="selectAccount.html";
         });
 
-        $("#deposit").click(function() {
-            localStorage.setItem('action', 'deposit');
+         $("#deposit").click(function() {
+            localStorage.setItem('action', 'deposit.html');
             window.location.href="selectAccount.html";
+        });
+
+        $("#accHistory").click(function() {
+            localStorage.setItem('action', 'accounts.html');
+            window.location.href="selectAccount.html";
+        });
+
+        $("#transfer").click(function() {
+            localStorage.setItem('action', 'transfer');
+            window.location.href="Transfer.html";
+        });
+
+        $("#exchange").click(function() {
+            localStorage.setItem('action', 'exchange.html');
+            window.location.href="selectAccount.html";
+        });
+
+        $("#back").click(function() {
+            localStorage.setItem('action', 'back');
+            window.location.href="welcome.html";
         });
 
         $("#exit").click(function() {
