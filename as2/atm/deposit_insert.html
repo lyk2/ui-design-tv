@@ -13,6 +13,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/atm.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -64,98 +66,71 @@
 
     <!-- Page Content -->
     <div class="container">
+    <div class="row">
+            <div class="col-xs-12 text-center">
         <h2>Deposit Cash/Cheques Below</h2>
         <body>
-            <img src="images/insertcash.jpg" width="30%" height="auto" title="insertcash"/>
-
+            <img src="images/insertcash.jpg" width="100px" height="auto" title="insertcash"/>
+            </body>
+            </div>
+            </div>
     <div class="row">
             <div class="col-xs-6">
                 <p>
-                    <h3>Account</h3>
-                </p>
-                <p>
-                    <h3>Balance</h3>
+                    <h3 style="margin-left:70%">Account:</h3>
                 </p>
             </div>
             <div class="col-xs-6">
                 <p>
                     <h3 id="account"/><!-- change to local storage after, see script-->
                 </p>
-                <p>
-                    <h3 id="balance"/>
-                </p>
             </div>
 
     </div>
     
-    <div class="input-group">
-        <span class="input-group-btn">
-            <button type="button" class="btn btn-default" onclick="myFunction()">Confirm ammount</button>
-        </span>
-        <input type="text" name="depositvalue" value="0.00">
-    </div><!-- /input-group -->
-
-        <button type="button" class="btn btn-default" onclick='window.location.href="deposit_confirmation.html"'>Next</button>
-        </body>
+    <div class="row">
+            <div class="col-xs-12 text-center">
+            <h4>Enter total amount deposited</h2>
+    <div class="input-group" style="width:500px;margin-right:auto;margin-left:auto">
+      <input type="number" id="total" class="form-control" placeholder="Total Amount">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" id="confirm">Confirm</button>
+      </span>
+    </div>
+    </div>
     </div>
     <!-- /.container -->
-    <script>
-        var uh = localStorage.getItem("account");
-        var uhuh = localStorage.getItem("balance");
-        $("#account").text(uh);
-        $("#balance").text(uhuh);
-    </script>
+    
 
-    <script>
-
-    function myFunction() {
-        var input = document.getElementsByName("depositvalue");
-        var e = new RegExp(/^[0-9]+(.[0-9][0-9])?$/)
-        var stringDesposit = input[0].value;
-        var deposit = parseInt(stringDesposit); 
-        try{
-        
-        if (!e.test(deposit)){
-            alert("invalid input");
-            deposit = parseFloat("0.00"); 
-            input.value = deposit;
-            location.reload();
-        }
-
-        }
-        catch(exception) {
-            alert("Invalid Input");
-        }
-        var updateBalance = localStorage.getItem(uh+"-balance");
-        updateBalance = parseFloat(updateBalance) + deposit;
-        localStorage.setItem(uh+"-balance",updateBalance);
-    }
-    </script>
+   
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/atm.js"></script>
 
     <script>
-    setInterval(function() {
-        showtime();
-    }, 6000);
+        var account = localStorage.getItem("account");
+        var balance = localStorage.getItem(account+"-balance");
+        $("#account").text(account);
 
-    showtime();
-
-    function showtime() {
-        var d = new Date();
-        time = "am"
-        if (d.getHours()>12) {
-            hours = d.getHours()-12
-            time = "pm"
-        }
-        $("#livetime").text(hours+ ":" + d.getMinutes() + time);
-    }
-
+        $("#confirm").click(function() {
+            var total = $("#total").val();
+            var intchecker = new RegExp(/^[0-9]+(.[0-9][0-9])?$/);
+            if (!intchecker.test(total)) {
+                dialogAlert("Alert", "Please enter in amount in proper format e.g. 10.13", function(){$("#total").val("")});
+            } else {
+                localStorage.setItem(account+"-balance", parseFloat(balance) + parseFloat(total));
+                localStorage.setItem("action", "deposit_receipt.html");
+                localStorage.setItem("deposit-total", total);
+                location.href="transaction.html";
+            }          
+        })
     </script>
+
 
 </body>
 

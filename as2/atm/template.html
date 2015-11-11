@@ -13,6 +13,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/atm.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -53,7 +55,7 @@
                         <a id="livetime"></a>
                     </li>
                     <li>
-                        <a href="#" onclick='window.alert("A teller will be on there way shortly, please standby")'>Request Help</a>
+                        <a href="#" id="help">Request Help</a>
                     </li>
                 </ul>
             </div>
@@ -64,7 +66,12 @@
 
     <!-- Page Content -->
     <div class="container">
-        <!-- ENTER YOUR SHIT HERE-->
+        <div class="row">
+            <div class="col-xs-12 text-center">
+            
+            </div>
+
+        </div>
 
     </div>
     <!-- /.container -->
@@ -74,26 +81,15 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/atm.js"></script>
+    <script src="js/jquery-ui.js"></script>
 
-    <script>
-    setInterval(function() {
-        showtime();
-    }, 6000);
-
-    showtime();
-
-    function showtime() {
-        var d = new Date();
-        time = "am"
-        if (d.getHours()>12) {
-            hours = d.getHours()-12
-            time = "pm"
-        }
-        $("#livetime").text(hours+ ":" + d.getMinutes() + time);
-    }
+    <script type="text/javascript">
+    //scripts go here
 
     </script>
 
 </body>
 
 </html>
+

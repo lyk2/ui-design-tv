@@ -92,21 +92,18 @@
         $("#chequings").click(function() {
             var action=localStorage.getItem('action');
             localStorage.setItem("account", "Chequings");
-            localStorage.removeItem('action');
             window.location.href=getActionURL(action);
         })
 
         $("#savings").click(function() {
             var action=localStorage.getItem('action');
             localStorage.setItem("account", "Savings");
-            localStorage.removeItem('action');
             window.location.href=getActionURL(action);
         })
 
         $("#credit").click(function() {
             var action=localStorage.getItem('action');
             localStorage.setItem("account", "Credit");
-            localStorage.removeItem('action');
             window.location.href=getActionURL(action);
         })
 

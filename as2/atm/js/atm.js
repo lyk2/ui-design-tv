@@ -42,7 +42,7 @@ function showtime() {
     var d = new Date();
     time = "am"
     var hours,time;
-    if (d.getHours()>13) {
+    if (d.getHours()>=12) {
         hours = d.getHours()-12
         time = "pm"
     } else
