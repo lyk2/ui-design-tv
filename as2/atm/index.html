@@ -141,7 +141,12 @@
                 dialogAlert("Alert", "Account number is not recognized", function() {$('#accountnum').val("");})
         });
 
-
+        if (!localStorage.getItem('name')) {
+            localStorage.setItem('Chequings-balance', "1234");
+            localStorage.setItem('Savings-balance', "4231");
+            localStorage.setItem('Credit-balance', "0");
+            localStorage.setItem("name", "jane doe");
+        }
 
 
     </script>
