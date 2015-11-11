@@ -78,7 +78,7 @@
         <ul class="dropdown-menu" style="width: 600px;left: 50%;right: auto;transform: translate(-50%, 0);">
             <li><a id="FromChequing" href="#">Chequing</a></li>
             <li><a id="FromSaving" href="#">Saving</a></li>
-            <li><a id="FromCreditCard" href="#">Credit Card</a></li>
+            <li><a id="FromCreditCard" href="#">Credit</a></li>
         </ul>
     </div>
     <div class="dropdown col-lg-12 text-center" style="margin-bottom:50px">
@@ -88,7 +88,7 @@
         <ul class="dropdown-menu" style="width: 600px;left: 50%;right: auto;transform: translate(-50%, 0);">
             <li><a id="ToChequing" href="#">Chequing</a></li>
             <li><a id="ToSaving" href="#">Saving</a></li>
-            <li><a id="ToCreditCard" href="#">Credit Card</a></li>
+            <li><a id="ToCreditCard" href="#">Credit</a></li>
         </ul>
     </div>
     <div class="col-lg-12 text-center">
@@ -124,7 +124,7 @@
         removeFromAccount();
     })
     $("#ToCreditCard").click(function () {
-        $("#ToAccount").text("Credit Card");
+        $("#ToAccount").text("Credit");
         removeFromAccount();
     })
     $("#FromChequing").click(function () {
@@ -136,7 +136,7 @@
         removeToAccount();
     })
     $("#FromCreditCard").click(function () {
-        $("#FromAccount").text("Credit Card");
+        $("#FromAccount").text("Credit");
         removeToAccount();
     })
     function removeToAccount() {
@@ -148,7 +148,7 @@
             $("#ToSaving").addClass('hidden');
             $("#ToCreditCard").removeClass('hidden');
             $("#ToChequing").removeClass('hidden');
-        } else if ($("#FromAccount").text() == "Credit Card") {
+        } else if ($("#FromAccount").text() == "Credit") {
             $("#ToSaving").removeClass('hidden');
             $("#ToCreditCard").addClass('hidden');
             $("#ToChequing").removeClass('hidden');
@@ -164,7 +164,7 @@
             $("#FromSaving").addClass('hidden');
             $("#FromCreditCard").removeClass('hidden');
             $("#FromChequing").removeClass('hidden');
-        } else if ($("#ToAccount").text() == "Credit Card") {
+        } else if ($("#ToAccount").text() == "Credit") {
             $("#FromSaving").removeClass('hidden');
             $("#FromCreditCard").addClass('hidden');
             $("#FromChequing").removeClass('hidden');
@@ -175,15 +175,15 @@
         var amount = $("#amount").val();
         var fromAccount = $("#FromAccount").text();
         var toAccount = $("#ToAccount").text();
-        if (fromAccount.indexOf("From Account")!=-1) {
-            if (toAccount.indexOf("To Account")!=-1) {
+        if (fromAccount.indexOf("From Account") != -1) {
+            if (toAccount.indexOf("To Account") != -1) {
                 dialogAlert("Alert", "Please select accounts to transfer from and to");
                 return;
             } else {
                 dialogAlert("Alert", "Please select an account to transfer fund from.");
                 return;
             }
-        } else if (toAccount.indexOf("To Account")!=-1) {
+        } else if (toAccount.indexOf("To Account") != -1) {
             dialogAlert("Alert", "Please select an account to transfer fund to.");
             return;
         }
@@ -193,8 +193,17 @@
                 $("#amount").val("")
             });
         } else {
-            localStorage.setItem(account + "-balance", parseFloat(balance) + parseFloat(total));
-            localStorage.setItem("action", "deposit_receipt.html");
+            if (fromAccount == "Credit") {
+                localStorage.setItem(fromAccount + "-balance", parseFloat(balance) + parseFloat(amount));
+            } else {
+                localStorage.setItem(fromAccount + "-balance", parseFloat(balance) - parseFloat(amount));
+            }
+            if (toAccount == "Credit") {
+                localStorage.setItem(toAccount + "-balance", parseFloat(balance) + parseFloat(amount));
+            } else {
+                localStorage.setItem(toAccount + "-balance", parseFloat(balance) - parseFloat(amount));
+            }
+            localStorage.setItem("action", "receipt.html");
             localStorage.setItem("deposit-total", total);
             location.href = "transaction.html";
         }
