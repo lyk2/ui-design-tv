@@ -84,7 +84,7 @@
                 <button class="btn btn-default action-button">Withdraw</button>
             </p>
             <p>
-                <button class="btn btn-default action-button">Deposit</button>
+                <button id="deposit" class="btn btn-default action-button">Deposit</button>
             </p>
             <p>
                 <button id="accHistory" class="btn btn-default action-button">Account History</button>
@@ -115,7 +115,12 @@
         $("#accHistory").click(function() {
             localStorage.setItem('action', 'accHistory');
             window.location.href="selectAccount.html";
-        })
+        });
+
+        $("#deposit").click(function() {
+            localStorage.setItem('action', 'deposit');
+            window.location.href="selectAccount.html";
+        });
     </script>
 
 </body>
