@@ -93,9 +93,14 @@
         //scripts go here
         var action = localStorage.getItem("action");
 
-        setTimeout(function() {
-            location.href=action;
-        }, Math.floor((Math.random() * 2000) + 1000));
+        if (action)
+            setTimeout(function() {
+                location.href=action;
+            }, Math.floor((Math.random() * 2000) + 1000));
+        else
+            setTimeout(function() {
+                location.href="index.html";
+            }, Math.floor((Math.random() * 2000) + 1000));
 
 
     </script>

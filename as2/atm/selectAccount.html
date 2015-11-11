@@ -102,19 +102,19 @@
         $("#chequings").click(function() {
             var action=localStorage.getItem('action');
             localStorage.setItem("account", "Chequings");
-            window.location.href=getActionURL(action);
+            window.location.href=action;
         })
 
         $("#savings").click(function() {
             var action=localStorage.getItem('action');
             localStorage.setItem("account", "Savings");
-            window.location.href=getActionURL(action);
+            window.location.href=action;
         })
 
         $("#credit").click(function() {
             var action=localStorage.getItem('action');
             localStorage.setItem("account", "Credit");
-            window.location.href=getActionURL(action);
+            window.location.href=action;
         })
 
         $("#back").click(function() {
@@ -126,19 +126,6 @@
             localStorage.setItem('action', 'exit');
             window.location.href="exit.html";
         });
-
-        function getActionURL(action) {
-            switch (action) {
-                case "accHistory":
-                    return "accounts.html";
-                    break;
-
-                case "deposit":
-                    return "deposit_insert.html";
-                    break;
-
-            }
-        }
     </script>
 
     <script>
