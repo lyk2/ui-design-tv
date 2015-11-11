@@ -76,8 +76,8 @@
                 data-toggle="dropdown">From Account
             <span class="caret"></span></button>
         <ul class="dropdown-menu" style="width: 600px;left: 50%;right: auto;transform: translate(-50%, 0);">
-            <li><a id="FromChequing" href="#">Chequing</a></li>
-            <li><a id="FromSaving" href="#">Saving</a></li>
+            <li><a id="FromChequing" href="#">Chequings</a></li>
+            <li><a id="FromSaving" href="#">Savings</a></li>
             <li><a id="FromCreditCard" href="#">Credit</a></li>
         </ul>
     </div>
@@ -86,15 +86,18 @@
                 data-toggle="dropdown">To Account
             <span class="caret"></span></button>
         <ul class="dropdown-menu" style="width: 600px;left: 50%;right: auto;transform: translate(-50%, 0);">
-            <li><a id="ToChequing" href="#">Chequing</a></li>
-            <li><a id="ToSaving" href="#">Saving</a></li>
+            <li><a id="ToChequing" href="#">Chequings</a></li>
+            <li><a id="ToSaving" href="#">Savings</a></li>
             <li><a id="ToCreditCard" href="#">Credit</a></li>
         </ul>
     </div>
-    <div class="col-lg-12 text-center">
-        <input type="text" class="textfield" id="amount" placeholder="Enter Amount"
-               style="height:auto;border:1px solid #000000" onkeypress="return isValidAmount(event)"/>
-        <button class="btn btn-primary" type="button" id="transfer">Transfer</button>
+    <div class="col-xs-4 col-xs-offset-4 text-center">
+        <div class="input-group">
+            <input type="text" class="textfield" id="amount" placeholder="Enter Amount" onkeypress="return isValidAmount(event)"/>
+        <span class="input-group-btn">
+              <button class="btn btn-default" type="button" id="transfer">Transfer</button>
+        </span>
+        </div>
     </div>
 
 
@@ -116,11 +119,11 @@
 
 
     $("#ToChequing").click(function () {
-        $("#ToAccount").text("Chequing");
+        $("#ToAccount").text("Chequings");
         removeFromAccount();
     })
     $("#ToSaving").click(function () {
-        $("#ToAccount").text("Saving");
+        $("#ToAccount").text("Savings");
         removeFromAccount();
     })
     $("#ToCreditCard").click(function () {
@@ -128,11 +131,11 @@
         removeFromAccount();
     })
     $("#FromChequing").click(function () {
-        $("#FromAccount").text("Chequing");
+        $("#FromAccount").text("Chequings");
         removeToAccount();
     })
     $("#FromSaving").click(function () {
-        $("#FromAccount").text("Saving");
+        $("#FromAccount").text("Savings");
         removeToAccount();
     })
     $("#FromCreditCard").click(function () {
@@ -140,11 +143,11 @@
         removeToAccount();
     })
     function removeToAccount() {
-        if ($("#FromAccount").text() == "Chequing") {
+        if ($("#FromAccount").text() == "Chequings") {
             $("#ToSaving").removeClass('hidden');
             $("#ToCreditCard").removeClass('hidden');
             $("#ToChequing").addClass('hidden');
-        } else if ($("#FromAccount").text() == "Saving") {
+        } else if ($("#FromAccount").text() == "Savings") {
             $("#ToSaving").addClass('hidden');
             $("#ToCreditCard").removeClass('hidden');
             $("#ToChequing").removeClass('hidden');
@@ -156,11 +159,11 @@
     }
 
     function removeFromAccount() {
-        if ($("#ToAccount").text() == "Chequing") {
+        if ($("#ToAccount").text() == "Chequings") {
             $("#FromSaving").removeClass('hidden');
             $("#FromCreditCard").removeClass('hidden');
             $("#FromChequing").addClass('hidden');
-        } else if ($("#ToAccount").text() == "Saving") {
+        } else if ($("#ToAccount").text() == "Savings") {
             $("#FromSaving").addClass('hidden');
             $("#FromCreditCard").removeClass('hidden');
             $("#FromChequing").removeClass('hidden');
@@ -168,6 +171,18 @@
             $("#FromSaving").removeClass('hidden');
             $("#FromCreditCard").addClass('hidden');
             $("#FromChequing").removeClass('hidden');
+        }
+    }
+
+    function hasBalance() {
+        var amount = $("#amount").val();
+        var fromAccount = $("#FromAccount").text();
+        var balance = localStorage.getItem(fromAccount + "-balance");
+        //set credit limit to 2000?
+        if (fromAccount == "Credit") {
+            return (2000 - fromAccount) >= balance;
+        } else {
+            return fromAccount > balance;
         }
     }
 
@@ -193,18 +208,25 @@
                 $("#amount").val("")
             });
         } else {
-            if (fromAccount == "Credit") {
-                localStorage.setItem(fromAccount + "-balance", parseFloat(balance) + parseFloat(amount));
-            } else {
-                localStorage.setItem(fromAccount + "-balance", parseFloat(balance) - parseFloat(amount));
+            if (!hasBalance) {
+                dialogAlert("Alert", "Insufficient funds");
+                return;
             }
-            if (toAccount == "Credit") {
-                localStorage.setItem(toAccount + "-balance", parseFloat(balance) + parseFloat(amount));
+            var fromBalance = localStorage.getItem(fromAccount + "-balance");
+            if (fromAccount == "Credit") {
+                localStorage.setItem(fromAccount + "-balance", parseFloat(fromBalance) + parseFloat(amount));
             } else {
-                localStorage.setItem(toAccount + "-balance", parseFloat(balance) - parseFloat(amount));
+                localStorage.setItem(fromAccount + "-balance", parseFloat(fromBalance) - parseFloat(amount));
+            }
+            var toBalance = localStorage.getItem(fromAccount + "-balance");
+            if (toAccount == "Credit") {
+                localStorage.setItem(toAccount + "-balance", parseFloat(toBalance) + parseFloat(amount));
+            } else {
+                localStorage.setItem(toAccount + "-balance", parseFloat(toBalance) - parseFloat(amount));
             }
             localStorage.setItem("action", "receipt.html");
-            localStorage.setItem("deposit-total", total);
+            localStorage.setItem("transaction-type", " Transfer")
+            localStorage.setItem("transaction-amount", amount);
             location.href = "transaction.html";
         }
     });
