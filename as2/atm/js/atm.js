@@ -25,7 +25,7 @@ function dialogAlert(title, html, action) {
     });
 };
 
-function addTransactionLog(account, type, amount, credit) {
+function addTransactionLog(account, oldbalance, type, amount, credit) {
 
     var log = localStorage.getItem(account+"-log");
 
@@ -38,7 +38,8 @@ function addTransactionLog(account, type, amount, credit) {
         type:type,
         credit:"",
         debit:"",
-        balance:localStorage.getItem(account+"-balance")
+        balance:oldbalance,
+        newbalance:localStorage.getItem(account+"-balance")
     };
 
     var dateObj = new Date();
@@ -50,10 +51,8 @@ function addTransactionLog(account, type, amount, credit) {
 
     if (credit){
         logitem.credit= "" + amount;
-        logitem.newbalance = parseFloat(logitem.balance) + parseFloat(amount);
     } else {
         logitem.debit= "" + amount;
-        logitem.newbalance = ParseFloat(logitem.balance) - parseFloat(amount);
     }
 
     log.unshift(logitem);
