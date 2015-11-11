@@ -25,4 +25,6 @@ Design Decisions:
 # Ability to print receipts
 # Display transactions in "Account History"
 # International Currency Exchange
-# Password input is not visible
+# Password is starred upon input
+# Pin changer
+# Automatic redirect back to login page upon exit

@@ -99,6 +99,14 @@
         </span>
         </div>
     </div>
+    <div class="row">
+            <div class="col-xs-12 text-right">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
+                    <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
+                </div>
+            </div>
+        </div>
 
 
 </div>
@@ -142,6 +150,16 @@
         $("#FromAccount").text("Credit");
         removeToAccount();
     })
+    
+    $("#back").click(function() {
+        localStorage.setItem('action', 'back');
+        window.location.href="welcome.html";
+    });
+    $("#exit").click(function() {
+        localStorage.setItem('action', 'exit');
+        window.location.href="exit.html";
+    });
+
     function removeToAccount() {
         if ($("#FromAccount").text() == "Chequings") {
             $("#ToSaving").removeClass('hidden');
