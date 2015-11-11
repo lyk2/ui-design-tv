@@ -72,17 +72,17 @@
                 <h1>
                    Account:
                 </h1>
-                <h2 
+                <h3 
                     id="account">
-                </h2>
+                </h3>
             </div>
             <div class="col-xs-6">
                 <h1>
                    Balance:
                 </h1>
-                <h2 
+                <h3 
                     $ id="balance">
-                </h2>
+                </h3>
             </div>
         </div>
         <div class="row">
@@ -121,8 +121,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script>
+        var balance = localStorage.getItem((localStorage.getItem("account")+"-balance"))
         $("#account").text(localStorage.getItem("account"))
-        $("#balance").text(localStorage.getItem("balance"))
+        $("#balance").text("$"+balance)
+
         $("#transactions").text(localStorage.getItem("transactions"))
     </script>
 
@@ -139,19 +141,23 @@
 
     <script type="text/javascript">
         var logs = localStorage.getItem((localStorage.getItem("account")+"-log"))
+
         console.log(logs);
-        for (date in localStorage) {
-            $("#table").append(addRow(date,time,balance,amount,credit,debit,newBal,type));
+
+        var logs = JSON.parse(logs);
+        for (var i = 0; i < logs.length; i++) {
+            var log = logs[i];
+            $("#table").append(addRow(log.date,log.time,log.balance,log.credit,log.debit,log.newbalance,log.type));
         }
 
-        function addRow (date,time,balance,amount,credit,debit,newBal,type) {
+        function addRow (date,time,balance,credit,debit,newBal,type) {
             var html = "<tr>";
             html += "<td>" + date + "</td>";
             html += "<td>" + time + "</td>";
             html += "<td>" + type + "</td>";
             html += "<td> $"  + balance + "</td>";
-            html += "<td> $" + credit + "</td>";
-            html += "<td> $" + debit + "</td>";
+            html += "<td>" + ((credit.length>0) ? "$" + credit : "--") + "</td>";
+            html += "<td>" + ((debit.length>0) ? "$" + debit : "--") + "</td>";
             html += "<td> $" + newBal + "</td>";
             html += "</tr>";
             return html;
