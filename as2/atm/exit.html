@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/atm.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -92,6 +93,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/atm.js"></script>
 
     <script type="text/javascript">
         $("#back").click(function() {
@@ -101,22 +104,9 @@
     </script>
 
     <script>
-    setInterval(function() {
-        showtime();
-    }, 6000);
-
-    showtime();
-
-    function showtime() {
-        var d = new Date();
-        time = "am"
-        if (d.getHours()>12) {
-            hours = d.getHours()-12
-            time = "pm"
-        }
-        $("#livetime").text(hours+ ":" + d.getMinutes() + time);
-    }
-
+        setTimeout(function(){
+            location.href="index.html";
+        }, 2000);
     </script>
 
 </body>
