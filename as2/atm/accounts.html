@@ -44,7 +44,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Bank Of Money</a>
+                <a class="navbar-brand" >Bank Of Money</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -92,6 +92,14 @@
                 </h3>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12 text-right">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
+                    <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- /.container -->
@@ -107,23 +115,15 @@
         $("#transactions").text(localStorage.getItem("transactions"))
     </script>
 
-    <script>
-    setInterval(function() {
-        showtime();
-    }, 6000);
-
-    showtime();
-
-    function showtime() {
-        var d = new Date();
-        time = "am"
-        if (d.getHours()>12) {
-            hours = d.getHours()-12
-            time = "pm"
-        }
-        $("#livetime").text(hours+ ":" + d.getMinutes() + time);
-    }
-
+    <script type="text/javascript">
+        $("#back").click(function() {
+            localStorage.setItem('action', 'back');
+            window.location.href="welcome.html";
+        });
+        $("#exit").click(function() {
+            localStorage.setItem('action', 'exit');
+            window.location.href="exit.html";
+        });
     </script>
 
 </body>

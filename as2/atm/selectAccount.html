@@ -50,7 +50,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Bank Of Money</a>
+                <a class="navbar-brand" >Bank Of Money</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -80,6 +80,16 @@
        
         </div>
 
+        <div class="row">
+            <div class="col-xs-12 text-right">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="back" type="button" class="btn btn-default btn-warning">Back</button>
+                    <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
+                </div>
+            </div>
+        </div>
+
+
     </div>
     <!-- /.container -->
 
@@ -106,6 +116,16 @@
             localStorage.setItem("account", "Credit");
             window.location.href=getActionURL(action);
         })
+
+        $("#back").click(function() {
+            localStorage.setItem('action', 'back');
+            window.location.href="welcome.html";
+        });
+
+        $("#exit").click(function() {
+            localStorage.setItem('action', 'exit');
+            window.location.href="exit.html";
+        });
 
         function getActionURL(action) {
             switch (action) {
