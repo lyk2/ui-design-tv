@@ -180,9 +180,9 @@
         var balance = localStorage.getItem(fromAccount + "-balance");
         //set credit limit to 2000?
         if (fromAccount == "Credit") {
-            return (2000 - fromAccount) >= balance;
+            return (2000 - balance) >= amount;
         } else {
-            return fromAccount > balance;
+            return balance > amount;
         }
     }
 
