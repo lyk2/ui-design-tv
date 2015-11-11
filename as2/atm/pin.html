@@ -110,11 +110,7 @@
         $('#login').on('click', function() {
             var pin = $('#pin').val()
 
-            if (pin == "1234"){
-                localStorage.setItem('Chequings-balance', "1234");
-                localStorage.setItem('Savings-balance', "4231");
-                localStorage.setItem('Credit-balance', "0");
-
+            if (pin == localStorage.getItem('pin')){
                  window.location.href='welcome.html';
              }
             else {
