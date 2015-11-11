@@ -69,7 +69,7 @@
 
     <div class="row">
         <div class="col-xs-12 text-center">
-            <h2>Please select an action</h2>
+            <h1>Please select an action</h1>
         </div>
     </div>
 
@@ -124,7 +124,7 @@
         });
 
          $("#deposit").click(function() {
-            localStorage.setItem('action', 'deposit_insertl.html');
+            localStorage.setItem('action', 'deposit_insert.html');
             window.location.href="selectAccount.html";
         });
 
@@ -146,12 +146,7 @@
         $("#pinchanger").click(function() {
             window.location.href="pinchanger.html";
         });
-
-        $("#back").click(function() {
-            localStorage.setItem('action', 'back');
-            window.location.href="welcome.html";
-        });
-
+        
         $("#exit").click(function() {
             localStorage.setItem('action', 'exit');
             window.location.href="exit.html";

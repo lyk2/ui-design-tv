@@ -77,6 +77,14 @@
                 </h4>
             </div>
         </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-right">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="back" type="button" class="btn btn-default btn-success">New Session</button>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- /.container -->
 
@@ -87,6 +95,13 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-ui.js"></script>
     <script src="js/atm.js"></script>
+
+    <script type="text/javascript">
+        $("#back").click(function() {
+            localStorage.setItem('action', 'back');
+            window.location.href="index.html";
+        });
+    </script>
 
     <script>
         setTimeout(function(){
