@@ -27,7 +27,7 @@ Design Decisions:
 # We added pictures to simplify the user's experience and provide guidance to those who are visual learners
 # A loading page that appears during transactions to give the user feedback that their transaction is in progress
 # Ability to print receipts
-# Display transactions in "Account History"
+# Display and print transactions in "Account History"
 # International Currency Exchange
 # Password is starred upon input
 # Pin changer
@@ -35,3 +35,4 @@ Design Decisions:
 # Input validation, withdrawing
 # A credit card account
 # Withdraw specific denominations
+# 
