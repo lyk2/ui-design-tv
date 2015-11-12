@@ -131,6 +131,12 @@
 
     <script type="text/javascript">
 
+        $("#accountnum").keyup(function(event){
+            if(event.keyCode == 13){
+                $("#login").trigger('click');
+            }
+        });
+
         $('#login').on('click', function() {
             var accno = $('#accountnum').val()
 
