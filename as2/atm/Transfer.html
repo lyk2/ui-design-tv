@@ -95,7 +95,7 @@
         <div class="input-group">
             <input type="text" class="textfield" id="amount" placeholder="Enter Amount" onkeypress="return isValidAmount(event)"/>
         <span class="input-group-btn">
-              <button class="btn btn-default" type="button" id="transfer">Transfer</button>
+              <button class="btn btn-success" type="button" id="transfer">Transfer</button>
         </span>
         </div>
     </div>
@@ -150,7 +150,7 @@
         $("#FromAccount").text("Credit");
         removeToAccount();
     })
-    
+
     $("#back").click(function() {
         localStorage.setItem('action', 'back');
         window.location.href="welcome.html";
