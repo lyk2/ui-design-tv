@@ -92,7 +92,8 @@
             <div class="col-xs-12 text-center">
             <p class="lead">Enter total amount deposited</p>
     <div class="input-group" style="width:500px;margin-right:auto;margin-left:auto">
-      <input type="text" id="total" class="form-control" placeholder="Total Amount">
+    <span class="input-group-addon" id="sizing-addon1" style="font-size:25px;padding-top:14px">$</span>
+      <input type="text" id="total" class="form-control" placeholder="Total Amount" onkeypress="return isValidAmount(event)">
       <span class="input-group-btn">
         <button class="btn btn-success" type="button" id="confirm">Confirm</button>
       </span>

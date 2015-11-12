@@ -204,6 +204,12 @@
 
             if (input > 3000) {
                 dialogAlert("Alert", "This machine does not allow for withdrawals exceeding $3000");
+                return;
+            }
+
+            if (input <= 0) {
+                dialogAlert("Alert", "Must enter an amount to withdraw");
+                return;
             }
 
 
@@ -235,7 +241,7 @@
     <script src="js/jquery-ui.js"></script>
 
     <script type="text/javascript">
-        $("#fastcash").hide();
+        $("#specific").hide();
 
         $("#other").click(function(){
             $("#specific").show();
