@@ -8,3 +8,7 @@
 .no-close .ui-dialog-titlebar-close {
  	display: none;
 }
+
+h1 {
+	font-weight: 500;
+}

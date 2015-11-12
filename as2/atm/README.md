@@ -4,7 +4,7 @@ Kevin Ly (lyk2)
 Meraj Patel (patelmu2)
 
 Instructions to run software:
-To run the software locally, in the atm folder, open up index.html in your browser.
+To run the software locally, in the atm folder, open up index.html in your browser OR http://tools.quarters.space/as2/atm
 Run on Chrome 46.
 Please view the application full-screen. 
 Please do not use browser functions (eg. navigation and manually editing location)
@@ -32,6 +32,6 @@ Design Decisions:
 # Password is starred upon input
 # Pin changer
 # Automatic redirect back to login page upon exit
-# Input validation
+# Input validation, withdrawing
 # A credit card account
 # Withdraw specific denominations
