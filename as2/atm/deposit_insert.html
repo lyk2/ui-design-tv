@@ -142,7 +142,7 @@
             if (!intchecker.test(total)) {
                 dialogAlert("Alert", "Please enter amount in proper format e.g. 10.13", function(){$("#total").val("")});
             } else {
-                localStorage.setItem(account+"-balance", parseFloat(balance) + parseFloat(total));
+                localStorage.setItem(account+"-balance", parseFloat(parseFloat(balance) + parseFloat(total)).toFixed(2));
                 localStorage.setItem("action", "receipt.html");
                 localStorage.setItem("transaction-type", " Deposit")
                 localStorage.setItem("transaction-amount", total);
