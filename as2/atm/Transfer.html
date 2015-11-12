@@ -226,23 +226,27 @@
                 $("#amount").val("")
             });
         } else {
-            if (!hasBalance) {
+            if (!hasBalance()) {
                 dialogAlert("Alert", "Insufficient funds");
                 return;
             }
             var fromBalance = localStorage.getItem(fromAccount + "-balance");
+            localStorage.setItem("fromAccount",$("#FromAccount").text() );
+            localStorage.setItem("toAccount",$("#ToAccount").text() );
+            localStorage.setItem("account",$("#FromAccount").text() + " -> " + $("#ToAccount").text() );
+            localStorage.setItem("transaction-amount", amount );
             if (fromAccount == "Credit") {
-                localStorage.setItem(fromAccount + "-balance", parseFloat(fromBalance) + parseFloat(amount));
+                localStorage.setItem(fromAccount + "-balance",  parseFloat(parseFloat(fromBalance) + parseFloat(amount)).toFixed(2));
             } else {
-                localStorage.setItem(fromAccount + "-balance", parseFloat(fromBalance) - parseFloat(amount));
+                localStorage.setItem(fromAccount + "-balance",  parseFloat(parseFloat(fromBalance) - parseFloat(amount)).toFixed(2));
             }
             var toBalance = localStorage.getItem(fromAccount + "-balance");
             if (toAccount == "Credit") {
-                localStorage.setItem(toAccount + "-balance", parseFloat(toBalance) + parseFloat(amount));
+                localStorage.setItem(toAccount + "-balance",  parseFloat(parseFloat(toBalance) + parseFloat(amount)).toFixed(2));
             } else {
-                localStorage.setItem(toAccount + "-balance", parseFloat(toBalance) - parseFloat(amount));
+                localStorage.setItem(toAccount + "-balance",  parseFloat(parseFloat(toBalance) - parseFloat(amount)).toFixed(2));
             }
-            localStorage.setItem("action", "receipt.html");
+            localStorage.setItem("action", "transfer_receipt.html");
             localStorage.setItem("transaction-type", " Transfer")
             localStorage.setItem("transaction-amount", amount);
             location.href = "transaction.html";
