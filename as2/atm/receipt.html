@@ -121,8 +121,8 @@
     <script type="text/javascript">
         //scripts go here
         $("#account").text(localStorage.getItem("account"));
-        $("#balance").text("$ "+localStorage.getItem(localStorage.getItem("account")+"-balance"));
-        $("#deposit").text("$ "+localStorage.getItem("transaction-amount"));
+        $("#balance").text("$ "+parseFloat(localStorage.getItem(localStorage.getItem("account")+"-balance")).toFixed(2));
+        $("#deposit").text("$ "+parseFloat(localStorage.getItem("transaction-amount")).toFixed(2));
 
         $("#transaction").text(localStorage.getItem('transaction-type') + " Amount");
 
