@@ -140,6 +140,12 @@
         $("#confirm").click(function() {
             var total = $("#total").val();
             var intchecker = new RegExp(/^[0-9]+(.[0-9][0-9])?$/);
+
+            if (parseFloat(total).toFixed(2)<=0){
+                dialogAlert("Alert", "Must deposit an amount greater than $0");
+                return;
+            }
+
             if (!intchecker.test(total)) {
                 dialogAlert("Alert", "Please enter amount in proper format e.g. 10.13", function(){$("#total").val("")});
             } else {
