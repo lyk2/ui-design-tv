@@ -180,6 +180,24 @@
 
     function transaction(){
             
+            if (account == "Credit"){
+
+                if (parseFloat(balance) > parseFloat(withdraw))  {
+                dialogAlert("Alert", "Insufficient funds");
+                return;
+            }
+            var x = parseFloat(parseFloat(parseFloat(balance)).toFixed(2)) + parseFloat(parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2));
+
+            localStorage.setItem(account+"-balance", x);
+            localStorage.setItem("action", "receipt.html");
+            addTransactionLog(account, balance, "currency exchange", parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2), false);
+            localStorage.setItem("transaction-type", " Withdraw")
+            localStorage.setItem("transaction-amount", parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2));
+            location.href="transaction.html";
+
+            }
+            else {
+
             if (parseFloat(balance) < parseFloat(withdraw))  {
                 dialogAlert("Alert", "Insufficient funds");
                 return;
@@ -191,6 +209,7 @@
             localStorage.setItem("transaction-type", " Withdraw")
             localStorage.setItem("transaction-amount", parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2));
             location.href="transaction.html";
+            }
     }
     </script>
 
