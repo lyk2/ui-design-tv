@@ -72,14 +72,6 @@
             </div>
 
         </div>
-        <div class="row">
-            <div class="col-xs-12 text-right">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
-                    <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
-                </div>
-            </div>
-        </div>
 
     </div>
     <!-- /.container -->
@@ -87,7 +79,7 @@
     <div class="container">
 
     <div class="col-lg-12 text-center" style="margin-bottom:50px">
-        <h1>International Exchange</h1>
+        <h1>Currency Exchange</h1>
     </div>
     <div class="dropdown col-lg-12 text-center" style="margin-bottom:50px">
         <button class="btn btn-primary dropdown-toggle" id="FromAccount" style="width: 600px" type="button"
@@ -142,6 +134,15 @@
     <br>
     <div style="margin-bottom:20px"> " " </div>
 
+    <div class="row">
+            <div class="col-xs-12 text-right">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
+                    <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
+                </div>
+            </div>
+        </div>
+
 
 </div>
 
@@ -187,7 +188,7 @@
 
             localStorage.setItem(account+"-balance", parseFloat(balance).toFixed(2) - parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2));
             localStorage.setItem("action", "receipt.html");
-            addTransactionLog(account, balance, "international withdraw", parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2), false);
+            addTransactionLog(account, balance, "currency exchange", parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2), false);
             localStorage.setItem("transaction-type", " Withdraw")
             localStorage.setItem("transaction-amount", parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2));
             location.href="transaction.html";

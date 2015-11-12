@@ -28,7 +28,7 @@ Design Decisions:
 # A loading page that appears during transactions to give the user feedback that their transaction is in progress
 # Ability to print receipts
 # Display and print transactions in "Account History"
-# International Currency Exchange
+# Currency Exchange
 # Password is starred upon input
 # Pin changer
 # Automatic redirect back to login page upon exit
