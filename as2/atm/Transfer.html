@@ -241,7 +241,7 @@
             } else {
                 localStorage.setItem(fromAccount + "-balance",  parseFloat(parseFloat(fromBalance) - parseFloat(amount)).toFixed(2));
             }
-            var toBalance = localStorage.getItem(fromAccount + "-balance");
+            var toBalance = localStorage.getItem(toAccount + "-balance");
             if (toAccount == "Credit") {
                 localStorage.setItem(toAccount + "-balance",  parseFloat(parseFloat(toBalance) - parseFloat(amount)).toFixed(2));
             } else {
@@ -254,7 +254,7 @@
 
 
             addTransactionLog(fromAccount, fromBalance, "Withdraw", amount, false);
-            addTransactionLog(toAccount, toBalance, "Transfer", amount, true);
+            addTransactionLog(toAccount, toBalance, "Deposit", amount, true);
         }
     });
 

@@ -116,7 +116,7 @@
         $('#login').on('click', function() {
             var pin = $('#pin').val()
 
-            if (pin == localStorage.getItem('pin') || pin=="1234"){
+            if (pin == localStorage.getItem('pin')){
                  window.location.href='welcome.html';
              }
             else {
