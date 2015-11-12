@@ -13,6 +13,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/atm.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <style>
@@ -56,7 +58,7 @@
                         <a id="livetime"></a>
                     </li>
                     <li>
-                        <a href="#" onclick='window.alert("A teller will be on their way shortly. Please standby.")'>Request Help</a>
+                        <a href="#" id="help">Request Help</a>
                     </li>
                 </ul>
             </div>
@@ -120,6 +122,8 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/atm.js"></script>
     <script>
         var balance = localStorage.getItem((localStorage.getItem("account")+"-balance"))
         $("#account").text(localStorage.getItem("account"))
