@@ -110,8 +110,7 @@
                 <p class="lead">Enter 8-digit account number</p>
 
                 <div class="input-group">
-                    <input type="text" id="accountnum" class="form-control" placeholder="Account Number"
-                           onkeypress="return isValidAmount(event)">
+                    <input type="text" id="accountnum" class="form-control" placeholder="Account Number"/>
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="button" id="login">Login</button>
                   </span>
@@ -132,16 +131,6 @@
 <script src="js/jquery-ui.js"></script>
 
 <script type="text/javascript">
-
-    $("#accountnum").keyup(function (event) {
-        if (event.keyCode == 13) {
-            $("#login").trigger('click');
-            $("#login").blur();
-            $("#accountnum").blur();
-            $("#login").focusout();
-            $("#accountnum").focusout();
-        }
-    });
 
     $('#login').on('click', function () {
         var accno = $('#accountnum').val()
