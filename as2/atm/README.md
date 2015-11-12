@@ -32,7 +32,6 @@ Design Decisions:
 # Password is starred upon input
 # Pin changer
 # Automatic redirect back to login page upon exit
-# Input validation, withdrawing
+# Validation: on input, withdrawl amounts, alert dialogs
 # A credit card account
-# Withdraw specific denominations
-# 
+# Withdraw preferred bill denominations
