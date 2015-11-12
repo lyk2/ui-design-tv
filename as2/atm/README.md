@@ -9,9 +9,9 @@ Run on Chrome 46.
 Please view the application full-screen. 
 Please do not use browser functions (eg. navigation and manually editing location)
 We have made the assumption that actions made directly with the machine (eg. swiping cards, inputing and withdrawing cash/cheques from ATM) are handled by the machine.
-
+Please note entering you account number simulates swiping your card.
 Account Number: 12341234
-Pin: 1234
+Initial Pin: 1234
 
 Design Decisions:
 # We implemented all the requirements
