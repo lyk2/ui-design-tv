@@ -1,3 +1,5 @@
+
+
 //dialog creation
 function dialogAlert(title, html, action) {
     $(document.body).append('<div id="alertDialog">' + html + '</div>');
@@ -21,6 +23,9 @@ function dialogAlert(title, html, action) {
         }],
         create: function () {
             $(".ui-dialog-buttonset button").attr('class', 'btn btn-default');
+        }, 
+        open: function(event, ui) {
+            $(this).focus();
         }
     });
 };

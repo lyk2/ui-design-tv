@@ -134,6 +134,10 @@
         $("#accountnum").keyup(function(event){
             if(event.keyCode == 13){
                 $("#login").trigger('click');
+                $("#login").blur();
+                $("#accountnum").blur();
+                $("#login").focusout();
+                $("#accountnum").focusout();
             }
         });
 
