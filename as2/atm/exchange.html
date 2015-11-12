@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Bank Of Money</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/atm.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+    body {
+        padding-top: 70px;
+        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" >Bank Of Money</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="float:right">
+                    <li>
+                        <a id="livetime"></a>
+                    </li>
+                    <li>
+                        <a href="#" id="help">Request Help</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 text-center">
+            
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-xs-12 text-right">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
+                    <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container -->
+
+    <div class="container">
+
+    <div class="col-lg-12 text-center" style="margin-bottom:50px">
+        <h1>International Exchange</h1>
+    </div>
+    <div class="dropdown col-lg-12 text-center" style="margin-bottom:50px">
+        <button class="btn btn-primary dropdown-toggle" id="FromAccount" style="width: 600px" type="button"
+                data-toggle="dropdown">US Dollars (Exchange USD 1.33 CAD)
+            <span class="caret"></span></button>
+        <ul class="dropdown-menu" style="width: 600px;left: 50%;right: auto;transform: translate(-50%, 0);">
+            <li><a id="usrate" href="#">US Dollars (Exchange USD 1.33 CAD) </a></li>
+        </ul>
+    </div>
+        <div class="row">
+            <div class="col-xs-6">
+                <p>
+                    <h3 style="margin-left:70%">Account:</h3>
+                </p>
+            </div>
+            <div class="col-xs-6">
+                <p>
+                    <h3 id="account"/><!-- change to local storage after, see script-->
+                </p>
+            </div>
+
+    </div>
+        <div>
+            <div class="col-xs-3 text-left">
+            </div> 
+
+            <div class="col-xs-3 text-left">
+                <p>
+                <h3> Conversion </h3>
+                <h3> US </h3>
+                <h3> CAD</h3>
+                </p>
+            </div> 
+            <div class="col-xs-6 text-center">
+                <p>
+                <h3> Amount </h3>
+                <h3 id="untiedstates">  </h3>
+                <h3 id="canadian">  </h3>
+                </p>
+            </div> 
+        </div>
+
+    <div class="col-lg-12 text-center" >
+        <button class="btn btn-primary" type="button" id="add" onclick="increment(2)">-</button>
+        <input type="text" class="textfield" id="amount" readonly="readonly" style="text-align:center"/>
+        <button class="btn btn-primary" type="button" id="subtract" onclick="increment(1)">+</button>
+    </div>
+    <br>
+    <div class="col-lg-12 text-center" style="margin-top:50px" >
+    <button class="btn btn-primary" type="button" id="subtract" onclick="transaction()">Withdraw Amount</button>
+    </div>
+    <br>
+    <div style="margin-bottom:20px"> " " </div>
+
+
+</div>
+
+    <script>
+
+    var account = localStorage.getItem("account");
+    document.getElementById("account").innerHTML = account;
+    var balance = localStorage.getItem(account+"-balance");
+    var withdraw = 20;
+    document.getElementById("canadian").innerHTML = "$" + Math.round(withdraw * 1.33 * 100) / 100;
+    document.getElementById("untiedstates").innerHTML = "$"  + withdraw;
+    document.getElementById("amount").value = "$" +withdraw + " US";
+
+    function increment(input) {
+        if (input == "1"){
+            withdraw = withdraw + 20;
+            document.getElementById("untiedstates").innerHTML = "$" + withdraw; 
+            document.getElementById("canadian").innerHTML = "$" + Math.round(withdraw * 1.33 * 100) / 100;
+            document.getElementById("amount").value = "$" + withdraw + " US";
+        }
+        else{
+            if (withdraw > 20){
+                withdraw = withdraw - 20;
+                document.getElementById("canadian").innerHTML = "$" + Math.round(withdraw * 1.33 * 100) / 100;
+                document.getElementById("untiedstates").innerHTML = "$" + withdraw;
+                document.getElementById("amount").value = "$" + withdraw + " US";
+            }
+            else{
+                withdraw = 20;
+                document.getElementById("canadian").innerHTML = "$" + Math.round(withdraw * 1.33 * 100) / 100;
+                document.getElementById("untiedstates").innerHTML = "$" + withdraw;
+                document.getElementById("amount").value = "$" + withdraw + " US";
+            }
+        }
+    }
+
+    function transaction(){
+            
+            if (parseFloat(balance) < parseFloat(withdraw))  {
+                dialogAlert("Alert", "Insufficient funds");
+                return;
+            }
+
+            localStorage.setItem(account+"-balance", parseFloat(balance).toFixed(2) - parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2));
+            localStorage.setItem("action", "receipt.html");
+            addTransactionLog(account, balance, "international withdraw", parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2), false);
+            localStorage.setItem("transaction-type", " Withdraw")
+            localStorage.setItem("transaction-amount", parseFloat(Math.round(withdraw * 1.33 * 100) / 100).toFixed(2));
+            location.href="transaction.html";
+    }
+    </script>
+
+    <!-- jQuery Version 1.11.1 -->
+    <script src="js/jquery.js"></script>
+
+    <script>
+    $("#usrate").click(function () {
+        $("#FromAccount").text("US Dollars (Exchange USD 1.33 CAD)");
+    })
+</script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/atm.js"></script>
+    <script src="js/jquery-ui.js"></script>
+
+    <script type="text/javascript">
+    //scripts go here
+        $("#back").click(function() {
+            localStorage.setItem('action', 'back');
+            window.location.href="welcome.html";
+        });
+        $("#exit").click(function() {
+            localStorage.setItem('action', 'exit');
+            window.location.href="exit.html";
+        });
+
+    </script>
+
+</body>
+
+</html>
+
