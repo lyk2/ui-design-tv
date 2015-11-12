@@ -217,14 +217,21 @@
             var account = localStorage.getItem("account");
             var balance = localStorage.getItem(account+"-balance");
 
-            if (parseFloat(parseFloat(balance) - parseInt(input)).toFixed(2) < 0) {
-                dialogAlert("Alert", "Cannot withdraw this amount due to insufficent funds");
-                return null;
+            if (account!="Credit") {
+                if (parseFloat(parseFloat(balance) - parseInt(input)).toFixed(2) < 0) {
+                    dialogAlert("Alert", "Cannot withdraw this amount due to insufficent funds");
+                    return null;
+                }
+            }
+
+            if (account=="Credit") {
+                localStorage.setItem(account+"-balance", parseFloat(parseFloat(balance) + parseInt(input)).toFixed(2));
+            } else {
+                localStorage.setItem(account+"-balance", parseFloat(parseFloat(balance) - parseInt(input)).toFixed(2));
             }
 
 
-
-            localStorage.setItem(account+"-balance", parseFloat(parseFloat(balance) - parseInt(input)).toFixed(2));
+            
             localStorage.setItem("action", "receipt.html");
             addTransactionLog(account, balance, "withdrawal", parseInt(input), false);
             localStorage.setItem("transaction-type", " Withdraw")
