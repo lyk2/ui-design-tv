@@ -5,7 +5,11 @@ Meraj Patel (patelmu2)
 
 Instructions to run software:
 To run the software locally, in the atm folder, open up index.html in your browser.
-Please view the application full-screen.
+Run on Chrome 46.
+Please view the application full-screen. 
+Please do not use browser functions (eg. navigation and manually editing location)
+We have made the assumption that actions made directly with the machine (eg. swiping cards, inputing and withdrawing cash/cheques from ATM) are handled by the machine.
+
 Account Number: 12341234
 Pin: 1234
 
@@ -28,3 +32,6 @@ Design Decisions:
 # Password is starred upon input
 # Pin changer
 # Automatic redirect back to login page upon exit
+# Input validation
+# A credit card account
+# Withdraw specific denominations

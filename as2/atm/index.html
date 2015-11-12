@@ -25,13 +25,16 @@
     </style>
 
     <style>
-    div.container2 {
-      display:inline-block;
-    }
+        .pics {
+            display: inline-block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px; 
+        }
 
-    p {
-      text-align:center;
-    }
+        #images{
+            text-align:center;
+        }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -78,7 +81,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-12 text-center">
-                <h1 style="margin-bottom:100px">Welcome to the Bank of Money</h1>
+                <h1 style="margin-bottom:75px">Welcome to the Bank of Money</h1>
             </div>
         </div>
         <div class="row">
@@ -86,23 +89,19 @@
                 
                 <p class="lead">Insert or Swipe card</p>
             </div>
-            <div class="row">
-                <div class="col-xs-3 col-xs-offset-2 text-right">
-                <p>
-                    <img src="img/insertCard.jpg" style="width:250px"> 
-                </p>
-                </div>
-                <div class="col-xs-3 col-xs-offset-2 text-left">
-                <p>
-                    <img src="img/swipe.jpg" style="width:250px">
-                </p>
-                </div>
+            <div id="images">
+                
+                    <img src="img/insertCard.jpg" style="width:250px" class="img-thumbnail img-responsive pics"> 
+                
+                    <img src="img/swipe.jpg" style="width:250px" class="img-thumbnail img-responsive pics">
+              
+               
             </div>
         </div>
         <div>
             <div class="row">
-                <div class="col-xs-12 text-center">
-                or
+                <div class="col-xs-12 text-center " >
+                    <p style="margin-top:20px"> or </p>
                 </div>  
             </div>
         </div>
