@@ -18,149 +18,161 @@
 
     <!-- Custom CSS -->
     <style>
-    body {
-        padding-top: 70px;
-        /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
-    }
+        body {
+            padding-top: 70px;
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
     </style>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" >Bank Of Money</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav" style="float:right">
-                    <li>
-                        <a id="livetime"></a>
-                    </li>
-                    <li>
-                        <a href="#" id="help">Request Help</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Bank Of Money</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav" style="float:right">
+                <li>
+                    <a id="livetime"></a>
+                </li>
+                <li>
+                    <a href="#" id="help">Request Help</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
     <div class="row">
-            <div class="col-xs-12 text-center">
-        <h1>Deposit Cash/Cheques Below</h1>
-        <body>
-            <img src="img/deposit.jpg" width="250px" height="auto" title="insertcash" class="img-thumbnail img-responsive"/>
+        <div class="col-xs-12 text-center">
+            <h1>Deposit Cash/Cheques Below</h1>
+
+            <body>
+            <img src="img/deposit.jpg" width="250px" height="auto" title="insertcash"
+                 class="img-thumbnail img-responsive"/>
             </body>
-            </div>
-            </div>
+        </div>
+    </div>
     <div class="row">
-            <div class="col-xs-6">
-                <p>
-                    <h3 style="margin-left:70%; font-weight:500"">Account:</h3>
-                </p>
-            </div>
-            <div class="col-xs-6">
-                <p>
-                    <h3 id="account"/><!-- change to local storage after, see script-->
-                </p>
-            </div>
+        <div class="col-xs-6">
+            <p>
+
+            <h3 style="margin-left:70%; font-weight:500">Account:</h3>
+            </p>
+        </div>
+        <div class="col-xs-6">
+            <p>
+
+            <h3 id="account"/><!-- change to local storage after, see script-->
+            </p>
+        </div>
 
     </div>
-    
+
     <div class="row">
-            <div class="col-xs-12 text-center">
+        <div class="col-xs-12 text-center">
             <p class="lead">Enter total amount deposited</p>
-    <div class="input-group" style="width:500px;margin-right:auto;margin-left:auto">
-    <span class="input-group-addon" id="sizing-addon1" style="font-size:25px;padding-top:14px">$</span>
-      <input type="text" id="total" class="form-control" placeholder="Total Amount" onkeypress="return isValidAmount(event)">
+
+            <div class="input-group" style="width:500px;margin-right:auto;margin-left:auto">
+                <span class="input-group-addon" id="sizing-addon1" style="font-size:25px;padding-top:14px">$</span>
+                <input type="text" id="total" class="form-control" placeholder="Total Amount"
+                       onkeypress="return isValidAmount(event)">
       <span class="input-group-btn">
         <button class="btn btn-success" type="button" id="confirm">Confirm</button>
       </span>
-    </div>
-    </div>
-    </div>
-    <div class="row" style="margin-top:50px">
-            <div class="col-xs-12 text-right">
-                <div class="btn-group" role="group" aria-label="Basic example">
-                    <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
-                    <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
-                </div>
             </div>
         </div>
-    <!-- /.container -->
-    
+    </div>
+    <div class="row" style="margin-top:50px">
+        <div class="col-xs-12 text-right">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button id="back" type="button" class="btn btn-default btn-warning">Main Menu</button>
+                <button id="exit" type="button" class="btn btn-default btn-danger">Exit</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container -->
 
-   
 
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+<!-- jQuery Version 1.11.1 -->
+<script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/atm.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/atm.js"></script>
 
-    <script type="text/javascript">
-        $("#back").click(function() {
-            localStorage.setItem('action', 'back');
-            window.location.href="welcome.html";
-        });
-        $("#exit").click(function() {
-            localStorage.setItem('action', 'exit');
-            window.location.href="exit.html";
-        });
-    </script>
+<script type="text/javascript">
+    $("#back").click(function () {
+        localStorage.setItem('action', 'back');
+        window.location.href = "welcome.html";
+    });
+    $("#exit").click(function () {
+        localStorage.setItem('action', 'exit');
+        window.location.href = "exit.html";
+    });
+</script>
 
-    <script>
-        var account = localStorage.getItem("account");
-        var balance = localStorage.getItem(account+"-balance");
-        $("#account").text(account);
+<script>
+    var account = localStorage.getItem("account");
+    var balance = localStorage.getItem(account + "-balance");
+    $("#account").text(account);
 
-        $("#confirm").click(function() {
-            var total = $("#total").val();
-            var intchecker = new RegExp(/^[0-9]+(.[0-9][0-9])?$/);
+    $("#confirm").click(function () {
+        var total = $("#total").val();
+        var intchecker = new RegExp(/^[0-9]+(.[0-9][0-9])?$/);
 
-            if (parseFloat(total).toFixed(2)<=0){
-                dialogAlert("Alert", "Must deposit an amount greater than $0");
-                return;
-            }
+        if (parseFloat(total).toFixed(2) <= 0) {
+            dialogAlert("Alert", "Must deposit an amount greater than $0");
+            return;
+        }
 
-            if (!intchecker.test(total)) {
-                dialogAlert("Alert", "Please enter amount in proper format e.g. 10.13", function(){$("#total").val("")});
+        if (!intchecker.test(total)) {
+            dialogAlert("Alert", "Please enter amount in proper format e.g. 10.13", function () {
+                $("#total").val("")
+            });
+        } else {
+            if (account == "Credit") {
+                localStorage.setItem(account + "-balance", parseFloat(parseFloat(balance) - parseFloat(total)).toFixed(2));
             } else {
-                localStorage.setItem(account+"-balance", parseFloat(parseFloat(balance) + parseFloat(total)).toFixed(2));
-                localStorage.setItem("action", "receipt.html");
-                localStorage.setItem("transaction-type", " Deposit")
-                localStorage.setItem("transaction-amount", total);
+                localStorage.setItem(account + "-balance", parseFloat(parseFloat(balance) + parseFloat(total)).toFixed(2));
+            }
+            localStorage.setItem("action", "receipt.html");
+            localStorage.setItem("transaction-type", " Deposit")
+            localStorage.setItem("transaction-amount", total);
 
-                //transaction
-                addTransactionLog(account, balance, "deposit", total, true);
+            //transaction
+            addTransactionLog(account, balance, "deposit", total, true);
 
-                location.href="transaction.html";
-            }          
-        });
-    </script>
+            location.href = "transaction.html";
+        }
+    });
+</script>
 
 
 </body>
