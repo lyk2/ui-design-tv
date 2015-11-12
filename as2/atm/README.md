@@ -1,7 +1,7 @@
-Wenqiang Chen (chen25)
-Carolyn Chong (chongce)
-Kevin Ly (lyk2)
-Meraj Patel (patelmu2)
+Wenqiang Chen (chen25, 1135089)
+Carolyn Chong (chongce, 1139105)
+Kevin Ly (lyk2, 1144604)
+Meraj Patel (patelmu2, 1137491)
 
 Instructions to run software:
 To run the software locally, in the atm folder, open up index.html in your browser OR http://tools.quarters.space/as2/atm
