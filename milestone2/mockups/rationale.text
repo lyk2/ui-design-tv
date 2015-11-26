@@ -7,9 +7,11 @@ Description
 Rationale
 
 v1
+- added larger icons to make media title more visible[1]
+- keep genres visible at all times to improve visibility[1]
+- added play button on top of media title to indicate video can be played. Good conceptual model[1] 
 
 v2
--added larger icons to make media title more visible
 -added more genres for better organization
 
 v3
