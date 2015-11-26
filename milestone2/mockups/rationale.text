@@ -11,4 +11,8 @@ v3
 v4
 - added a better description to the search bar to allow users to narrow their search
 - updated theme styles
-- added 'eyes' to media summary page to inform user which episodes they have already watched
+- added 'eyes' to media summary page to inform user which episodes they have already watched; this is good feedback [1]
+- replaced subscription with favourites icon; this adds clarity so as not to confuse user with service subscription, also good discoverability [1]
+
+REFERENCES
+1.	Don Norman. 2013. The Design of Everyday Things – Revised and Expanded Edition. Basic Books, New York, 10-131.
