@@ -7,14 +7,23 @@ Description
 Rationale
 
 v1
-- added larger icons to make media title more visible[1]
-- keep genres visible at all times to improve visibility[1]
-- added play button on top of media title to indicate video can be played. Good conceptual model[1] 
+-used larg icons to make media title more visible [1]
+-used a pager to switch between contents
 
 v2
--added more genres for better organization
+-changed larg icons to smaller icons, utilize space more efficiently
+-removed couple genre because the list is too long
+-added prompt text and search icon to search bar, increases visibility [1]
+-added summary page
 
 v3
+- added landing page to simulate full website access experience
+- added home page for more information
+- added subscription page for television and movie following
+- added user dropdown for logout and settings
+- cleaned up genre selection in to a dropdown, improves visibilty, cleans up interface [1]
+- altered title description to a modal window, improves conceptual model by displaying information in a window [1]
+- infinite vertical scrolling, to enhances visibility all on one page [1]
 
 v4
 - removed login page because it is not necessary for our project
