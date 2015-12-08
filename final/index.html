@@ -9,13 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Heroic Features - Start Bootstrap Template</title>
+    <title>Streamer</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
+    <!-- Theme CSS -->
     <link href="assets/css/heroic-features.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="assets/css/custom.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,21 +42,43 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" >Streamer</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#">Movies</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#">TV Series</a>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#">
+                          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                    
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Logout</a></li>
+                      </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="title, actor, genre...">
+                    </div>
+                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </form>
+                
             </div>
             <!-- /.navbar-collapse -->
         </div>
