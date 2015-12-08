@@ -88,12 +88,12 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-9">
+            <div class="col-xs-8">
                 <h2 style="font-weight:500">
                    Transactions:
                 </h2>
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-4">
                 <button class="btn btn-default action-button" id="print">Print Receipt</button>
                 
             </div>
@@ -163,7 +163,7 @@
         console.log(logs);
 
         var logs = JSON.parse(logs);
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 4; i++) {
             var log = logs[i];
             $("#table").append(addRow(log.date,log.time,log.balance,log.credit,log.debit,log.newbalance,log.type));
         }

@@ -75,12 +75,11 @@
                 <p class="lead">Please enter pin to continue</p>
                 
                 <div class="input-group" style="width:300px;margin-left:auto;margin-right:auto">
-                  <input type="password" id="pin" class="form-control" placeholder="Enter Pin" onkeypress="return isValidAmount(event)">
+                  <input type="password" id="pin" class="form-control" placeholder="Enter Pin">
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="button" id="login">Login</button>
                   </span>
                 </div>
-                
                 <p></p>
                 
             </div>
@@ -107,16 +106,10 @@
 
     <script type="text/javascript">
 
-         $("#pin").keyup(function(event){
-            if(event.keyCode == 13){
-                $("#login").trigger('click');
-            }
-        });
-
         $('#login').on('click', function() {
             var pin = $('#pin').val()
 
-            if (pin == localStorage.getItem('pin') || pin=="1234"){
+            if (pin == localStorage.getItem('pin')){
                  window.location.href='welcome.html';
              }
             else {

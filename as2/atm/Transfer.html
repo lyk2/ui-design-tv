@@ -93,6 +93,7 @@
     </div>
     <div class="col-xs-4 col-xs-offset-4 text-center">
         <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon1" style="font-size:25px;padding-top:14px">$</span>
             <input type="text" class="textfield" id="amount" placeholder="Enter Amount" onkeypress="return isValidAmount(event)"/>
         <span class="input-group-btn">
               <button class="btn btn-success" type="button" id="transfer">Transfer</button>
@@ -196,9 +197,9 @@
         var amount = $("#amount").val();
         var fromAccount = $("#FromAccount").text();
         var balance = localStorage.getItem(fromAccount + "-balance");
-        //set credit limit to 2000?
+        //set credit limit to 3000?
         if (fromAccount == "Credit") {
-            return (2000 - parseFloat(balance)) >= parseFloat(amount);
+            return (3000 - parseFloat(balance)) >= parseFloat(amount);
         } else {
             return parseFloat(balance) > parseFloat(amount);
         }
@@ -213,21 +214,21 @@
                 dialogAlert("Alert", "Please select accounts to transfer from and to");
                 return;
             } else {
-                dialogAlert("Alert", "Please select an account to transfer fund from.");
+                dialogAlert("Alert", "Please select an account to transfer funds from.");
                 return;
             }
         } else if (toAccount.indexOf("To Account") != -1) {
-            dialogAlert("Alert", "Please select an account to transfer fund to.");
+            dialogAlert("Alert", "Please select an account to transfer funds to.");
             return;
         }
         var intchecker = new RegExp(/^[0-9]+(\.[0-9][0-9])?$/);
-        if (!intchecker.test(amount)) {
+        if (!intchecker.test(amount) || parseFloat(amount)==0) {
             dialogAlert("Alert", "Please enter amount in proper format e.g. 10.13", function () {
                 $("#amount").val("")
             });
         } else {
             if (!hasBalance()) {
-                dialogAlert("Alert", "Insufficient funds");
+                dialogAlert("Alert", "Cannot withdraw this amount due to insufficient funds");
                 return;
             }
             var fromBalance = localStorage.getItem(fromAccount + "-balance");
@@ -240,16 +241,20 @@
             } else {
                 localStorage.setItem(fromAccount + "-balance",  parseFloat(parseFloat(fromBalance) - parseFloat(amount)).toFixed(2));
             }
-            var toBalance = localStorage.getItem(fromAccount + "-balance");
+            var toBalance = localStorage.getItem(toAccount + "-balance");
             if (toAccount == "Credit") {
-                localStorage.setItem(toAccount + "-balance",  parseFloat(parseFloat(toBalance) + parseFloat(amount)).toFixed(2));
-            } else {
                 localStorage.setItem(toAccount + "-balance",  parseFloat(parseFloat(toBalance) - parseFloat(amount)).toFixed(2));
+            } else {
+                localStorage.setItem(toAccount + "-balance",  parseFloat(parseFloat(toBalance) + parseFloat(amount)).toFixed(2));
             }
             localStorage.setItem("action", "transfer_receipt.html");
             localStorage.setItem("transaction-type", " Transfer")
             localStorage.setItem("transaction-amount", amount);
             location.href = "transaction.html";
+
+
+            addTransactionLog(fromAccount, fromBalance, "Withdraw", amount, false);
+            addTransactionLog(toAccount, toBalance, "Deposit", amount, true);
         }
     });
 

@@ -1,0 +1,40 @@
+Description
+- dropdowns are only visible when clicked
+- play button icons lead straight to video player
+- clicking on titles leads to media summary page
+- clicking 'enter' after typing in search bar will generate search results
+
+Rationale
+
+v1
+-used larg icons to make media title more visible [1]
+-used a pager to switch between contents
+
+v2
+-changed larg icons to smaller icons, utilize space more efficiently
+-removed couple genre because the list is too long
+-added prompt text and search icon to search bar, increases visibility [1]
+-added summary page
+
+v3
+- added landing page to simulate full website access experience
+- added home page for more information
+- added subscription page for television and movie following
+- added user dropdown for logout and settings
+- cleaned up genre selection in to a dropdown, improves visibilty, cleans up interface [1]
+- altered title description to a modal window, improves conceptual model by displaying information in a window [1]
+- infinite vertical scrolling, to enhances visibility all on one page [1]
+
+v4
+- removed login page because it is not necessary for our project
+- added a better description to the search bar to allow users to narrow their search; this is a good constraint because it limits what you can search for [1]
+- updated theme styles
+- added 'eyes' to media summary page to inform user which episodes they have already watched; this is good feedback [1]
+- replaced subscription with favourites icon; this adds clarity so as not to confuse user with service subscription, thus supports conceptual model [1]
+- minor redesign to accomodate more rows of titles
+- changed modal media summary window to a page to create more space for more information
+- dropdowns and Watch Now buttons afford clicking
+- toggle view icons support conceptual model [1]
+
+REFERENCES
+1.	Don Norman. 2013. The Design of Everyday Things – Revised and Expanded Edition. Basic Books, New York, 10-131.
