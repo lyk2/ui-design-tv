@@ -32,61 +32,64 @@
 <body>
 
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" >Streamer</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">TV Series</a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">
-                          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
-                      <ul class="dropdown-menu">
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Streamer</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Movies</a>
+                </li>
+                <li>
+                    <a href="#">TV Series</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu">
                         <li><a href="#">Account</a></li>
                         <li><a href="#">Logout</a></li>
-                      </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="title, actor, genre...">
-                    </div>
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                </form>
-                
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="title, actor, genre...">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"
+                                                                    aria-hidden="true"></span></button>
+            </form>
 
-    <!-- Page Content -->
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
 
 
 <!-- Page Content -->
@@ -144,10 +147,14 @@
 
     <div class="col-md-12 text-left"><h3>Suggested</h3></div>
 
-    <div class="col-md-10 text-left">   
-        <div class="btn-group btn-toggle"> 
-            <button class="btn btn-default" data-toggle="collapse" data-target="#collapsible" onclick="movies()">Movies</button>
-            <button class="btn btn-primary" data-toggle="collapse" data-target="#collapsible" onclick="tv()">Tv Shows</button>
+    <div class="col-md-10 text-left">
+        <div class="btn-group btn-toggle">
+            <button class="btn btn-default" id="suggestMovieCarousel" data-toggle="collapse" data-target="#collapsible"
+                    onclick="suggestedMovies()">
+                Movies
+            </button>
+            <button class="btn btn-primary" id="suggestTvCarousel" data-toggle="collapse" data-target="#collapsible" onclick="suggestedTv()">Tv Shows
+            </button>
         </div>
     </div>
 
@@ -155,7 +162,6 @@
     <div class="col-md-12">
         <div class="carousel slide" id="suggestedCarousel">
             <div class="carousel-inner" id="suggesteditemID">
-
             </div>
             <a class="left carousel-control" href="#suggestedCarousel" data-slide="prev"><i
                     class="glyphicon glyphicon-chevron-left"></i></a>
@@ -182,11 +188,13 @@
                 </div>
                 <div class="item">
                     <div class="col-xs-3"><a href="#"><img class="img-responsive" style="width: 214px; height: 317px;"
-                                                           src="http://ia.media-imdb.com/images/M/MV5BMTUyNDkzMjg3Nl5BMl5BanBnXkFtZTgwNDIwMjkxNzE@._V1_SY298_CR11,0,201,298_AL_.jpg"></a></div>
+                                                           src="http://ia.media-imdb.com/images/M/MV5BMTUyNDkzMjg3Nl5BMl5BanBnXkFtZTgwNDIwMjkxNzE@._V1_SY298_CR11,0,201,298_AL_.jpg"></a>
+                    </div>
                 </div>
                 <div class="item">
                     <div class="col-xs-3"><a href="#"><img class="img-responsive" style="width: 214px; height: 317px;"
-                                                           src="http://ia.media-imdb.com/images/M/MV5BMTc1NTE3NDYxM15BMl5BanBnXkFtZTgwMDI3NDAzNzE@._V1_SX201_CR0,0,201,298_AL_.jpg"></a></div>
+                                                           src="http://ia.media-imdb.com/images/M/MV5BMTc1NTE3NDYxM15BMl5BanBnXkFtZTgwMDI3NDAzNzE@._V1_SX201_CR0,0,201,298_AL_.jpg"></a>
+                    </div>
                 </div>
                 <div class="item">
                     <div class="col-xs-3"><a href="#"><img class="img-responsive" style="width: 214px; height: 317px;"
@@ -200,7 +208,8 @@
                 </div>
                 <div class="item">
                     <div class="col-xs-3"><a href="#"><img class="img-responsive" style="width: 214px; height: 317px;"
-                                                           src="http://ia.media-imdb.com/images/M/MV5BMjM2MTQ2MzcxOF5BMl5BanBnXkFtZTgwNzE4NTUyNzE@._V1_SX214_AL_.jpg"></a></div>
+                                                           src="http://ia.media-imdb.com/images/M/MV5BMjM2MTQ2MzcxOF5BMl5BanBnXkFtZTgwNzE4NTUyNzE@._V1_SX214_AL_.jpg"></a>
+                    </div>
                 </div>
                 <div class="item">
                     <div class="col-xs-3"><a href="#"><img class="img-responsive" style="width: 214px; height: 317px;"
@@ -238,22 +247,66 @@
 
 <script>
 
-    function movies(){
-        $("#suggesteditemID").carousel("pause").removeData();
-        for (var x = 1; x < 9; x++){
-            if (x == 1){
-                $('<div class="item active" ><div class="col-xs-3"><a href="#"><img src="'+"assets/img/tv-shows/"+x.toString()+".jpg"+'"></a></div></div>').appendTo('#suggesteditemID');
-            }
-            else{
-                $('<div class="item"><div class="col-xs-3"><a href="#"><img src="'+"assets/img/tv-shows/"+x.toString()+".jpg"+'"></a></div></div>').appendTo('#suggesteditemID');
+    function suggestedMovies() {
+        $('#suggesteditemID').empty();
+        var currentClass = $('#suggestMovieCarousel').attr('class');
+        if (currentClass == 'btn btn-default') {
+            for (var x = 1; x < 9; x++) {
+                if (x == 1) {
+                    var img = '<div class="item active">';
+                    for (var y = x; y < x + 4; y++) {
+                        img += '<div class="col-xs-3"><a href="#"><img class="img-responsive" style="width: 214px; height: 317px;" src="http://ia.media-imdb.com/images/M/MV5BMjE0MjkyODQ3NF5BMl5BanBnXkFtZTgwNDM1OTk1NjE@._V1_SY317_CR0,0,214,317_AL_.jpg"></a> </div>'
+                    }
+                    img += '</div>';
+                    $(img).appendTo('#suggesteditemID');
+                }
+                else {
+                    var img = '<div class="item">';
+                    for (var y = x; y < x + 4; y++) {
+                        img += '<div class="col-xs-3"><a href="#"><img class="img-responsive" style="width: 214px; height: 317px;" src="http://ia.media-imdb.com/images/M/MV5BMjE0MjkyODQ3NF5BMl5BanBnXkFtZTgwNDM1OTk1NjE@._V1_SY317_CR0,0,214,317_AL_.jpg"></a> </div>'
+                    }
+                    img += '</div>';
+                    $(img).appendTo('#suggesteditemID');
+                }
             }
         }
-        $("#suggestedCarousel").carousel();
+        $('#suggestMovieCarousel').removeClass('btn-default');
+        $('#suggestMovieCarousel').addClass('btn-primary');
+        $('#suggestTvCarousel').removeClass('btn-primary');
+        $('#suggestTvCarousel').addClass('btn-default');
     }
 
-    function myfunction2(){
-        for (var x = 1; x < 9; x++){
-            $('#suggesteditem'+x.toString()).remove();  
+    function suggestedTv(){
+        $('#suggesteditemID').empty();
+        var currentClass = $('#suggestTvCarousel').attr('class');
+        if (currentClass == 'btn btn-default') {
+            for (var x = 1; x < 9; x++) {
+                if (x == 1) {
+                    var img = '<div class="item active">';
+                    for (var y = x; y < x + 4; y++) {
+                        img += '<div class="col-xs-3"><a href="#"><img class="img-responsive" style="width: 214px; height: 317px;" src="http://ia.media-imdb.com/images/M/MV5BMjE0MjkyODQ3NF5BMl5BanBnXkFtZTgwNDM1OTk1NjE@._V1_SY317_CR0,0,214,317_AL_.jpg"></a> </div>'
+                    }
+                    img += '</div>';
+                    $(img).appendTo('#suggesteditemID');
+                }
+                else {
+                    var img = '<div class="item">';
+                    for (var y = x; y < x + 4; y++) {
+                        img += '<div class="col-xs-3"><a href="#"><img class="img-responsive" style="width: 214px; height: 317px;" src="http://ia.media-imdb.com/images/M/MV5BMjE0MjkyODQ3NF5BMl5BanBnXkFtZTgwNDM1OTk1NjE@._V1_SY317_CR0,0,214,317_AL_.jpg"></a> </div>'
+                    }
+                    img += '</div>';
+                    $(img).appendTo('#suggesteditemID');
+                }
+            }
+        }
+        $('#suggestTvCarousel').removeClass('btn-default');
+        $('#suggestTvCarousel').addClass('btn-primary');
+        $('#suggestMovieCarousel').removeClass('btn-primary');
+        $('#suggestMovieCarousel').addClass('btn-default');
+    }
+    function myfunction2() {
+        for (var x = 1; x < 9; x++) {
+            $('#suggesteditem' + x.toString()).remove();
         }
     }
 
