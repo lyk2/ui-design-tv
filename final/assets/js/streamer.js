@@ -5,7 +5,8 @@ function genMovieModal (title, img) {
     html += "<div class='container' style='width:100%'>"
     html +=     "<div class='row'>" +
                     "<div class='col-xs-3'> " +
-                        '<img src="assets/img/movie/'+img+'" style="width: 90%;margin-top:22px">' +
+                        '<img id="art" class="art" src="assets/img/movie/'+img+'" style="width: 90%;margin-top:22px">' +
+                        '<span class="glyphicon glyphicon-play boxart" style=" margin-left: -55%; font-size: 60px; "></span>' + 
                     "</div>" + 
                     "<div class='col-xs-9'> " +
                         "<h2>"+title+"</h2> " +
@@ -17,6 +18,22 @@ function genMovieModal (title, img) {
     html += "</div>"
 
     return html;
+}
+
+function playWindow() {
+    $(document.body).append('<div id="player"></div>')
+
+    $("#player").dialog({
+        dialogClass: "no-close",
+        title: "player",
+        modal: true,
+        draggable: false,
+        resizable: false,
+        closeOnEscape: true,
+        width: $(window).width(),
+        height: $(window).height()
+    })
+
 }
 
 
@@ -50,11 +67,20 @@ function dialogAlert(title, html, action) {
 
             $(".ui-dialog-titlebar").hide();
 
+
+            $("#art").hover(function() {
+                $(".boxart").show();
+            }, function() {
+                $(".boxart").hide();
+            });
+
             $('.ui-widget-overlay').bind('click',function(){
                 $('#alertDialog').dialog('close');
                 $('#alertDialog').dialog("destroy");
                 $("#alertDialog").remove();
-            })
+            });
+
+
         }
     });
 };
