@@ -17,6 +17,9 @@
     <!-- Custom CSS -->
     <link href="assets/css/heroic-features.css" rel="stylesheet">
 
+    <link href="assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="assets/css/streamer.css" rel="stylesheet">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -67,7 +70,7 @@
         <header class="jumbotron hero-spacer">
             <h1>A Warm Welcome!</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-            <p><a class="btn btn-primary btn-large">Call to action!</a>
+            <p><a class="btn btn-primary btn-large" id="test">Call to action!</a>
             </p>
         </header>
 
@@ -158,6 +161,19 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
+
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/streamer.js"></script>
+
+    <script type="text/javascript">
+
+    $("#test").click(function(){
+    	dialogAlert('asdf', genMovieModal("Avengers: Age of Ultron", "avengers-2.jpg"))
+    })
+
+
+
+    </script>
 
 </body>
 
