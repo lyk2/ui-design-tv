@@ -202,3 +202,34 @@ function genreMovieSelect (genre) {
 
 
 }
+
+function sortyear() {
+
+    var list = JSON.parse(localStorage.getItem('activelisting'));
+    list.sort(compareyear);
+    return list;
+};
+
+
+function sorttitle() {
+
+    var list = JSON.parse(localStorage.getItem('activelisting'));
+    list.sort(compareyear);
+    return list;
+};
+
+function compareyear(a,b) {
+  if (a.year < b.year)
+    return -1;
+  if (a.year > b.year)
+    return 1;
+  return 0;
+}
+
+function comparetitle(a,b) {
+  if (a.title < b.title)
+    return -1;
+  if (a.title > b.title)
+    return 1;
+  return 0;
+}

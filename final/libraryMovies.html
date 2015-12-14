@@ -152,12 +152,12 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Sort by<span class="caret"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <ul  class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#">Popularity</a></li>
                         <li><a href="#">Trending</a></li>
                         <li><a href="#">Last Added</a></li>
-                        <li><a href="#">Year</a></li>
-                        <li><a href="#">Title</a></li>
+                        <li><a id="sortyear" href="#">Year</a></li>
+                        <li><a id="sorttitle" href="#">Title</a></li>
                         <li><a href="#">Rating</a></li>
                     </ul>
                 </li>
@@ -206,7 +206,7 @@
 <!-- Page Content -->
 
 <!-- grid view -->
-<div class="container">
+<div id="movielistings" class="container">
 
     <div class="row">
         <div class="col-md-2">
@@ -480,8 +480,28 @@
       })
     });
 
+    localStorage.setItem('activelisting', JSON.stringify(JSON.parse(localStorage.getItem('movielist'))));
+
+    $("#sortyear").click(function(){
+
+        $("#movielistings").empty();
+        $("#movielistings").append(genListHtml(sortyear()));
+
+    });
+
+    $("#sorttitle").click(function(){
+
+        $("#movielistings").empty();
+        $("#movielistings").append(genListHtml(sorttitle()));
+
+    });
+
+    $("#movielistings").empty();
+    $("#movielistings").append(genMovielibrary());
+
 </script>
 
 </body>
 
 </html>
+  
