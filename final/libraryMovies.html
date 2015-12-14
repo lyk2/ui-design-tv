@@ -32,74 +32,75 @@
 
 <body>
 
- <div id="player" style="display:none">
-        <!-- Navigation -->
-          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-             <div class="container">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav">
-                      <li>
-                         <a id="titlename">MOVIE NAME</a>
-                      </li>
-                   </ul>
-                   <ul class="nav navbar-nav navbar-right">
-                      <li>
-                         <a id="closeplayer" href="#">
-                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                         </a>
-                      </li>
-                   </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-             </div>
-             <!-- /.container -->
-          </nav>
-          <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-             <div class="container">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav" style="
+<div id="player" style="display:none">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="titlename">MOVIE NAME</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="closeplayer" href="#">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="
                       /* margin-top: 5px; */
                       ">
-                      <li style="
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-backward"></span></button>
-                      </li>
-                      <li style="
+                    </li>
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-play"></span></button>
-                      </li>
-                      <li style="
+                    </li>
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-forward"></span></button>
-                      </li>
-                      <li>
-                         <div class="bs-component" style="
+                    </li>
+                    <li>
+                        <div class="bs-component" style="
                             ">
                             <div class="progress progress-striped active" style="
                                width: 100vh;
                                margin-top: 16px;
                                background-color: black;
                                ">
-                               <div class="progress-bar" style="width: 84%;"></div>
+                                <div class="progress-bar" style="width: 84%;"></div>
                             </div>
-                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-                         </div>
-                      </li>
-                   </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-             </div>
-             <!-- /.container -->
-          </nav>
-    </div>
+                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt;
+                                &gt;</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -152,7 +153,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Sort by<span class="caret"></span></a>
-                    <ul  class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#">Popularity</a></li>
                         <li><a href="#">Trending</a></li>
                         <li><a href="#">Last Added</a></li>
@@ -163,12 +164,13 @@
                 </li>
                 <li>
                     <a href="#">
-                        <span class="glyphicon glyphicon-th" aria-hidden="true" ></span>
+                        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" onclick="location.href = 'libraryListView.html';"></span>
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"
+                              onclick="location.href = 'libraryListView.html';"></span>
                     </a>
                 </li>
             </ul>
@@ -211,7 +213,8 @@
     <div class="row">
         <div class="col-md-2">
             <img class="img-responsive geneva" style="width: 150px; height: 220px; "
-                 src="assets/img/movies/americanBeauty.jpg" onclick="showModal('American Beauty', 'americanBeauty.jpg')">
+                 src="assets/img/movies/americanBeauty.jpg"
+                 onclick="showModal('American Beauty', 'americanBeauty.jpg')">
 
             <p>American Beauty<br>2014</p>
         </div>
@@ -250,7 +253,8 @@
     <div class="row">
         <div class="col-md-2">
             <img class="img-responsive geneva" style="width: 150px; height: 220px; "
-                 src="assets/img/movies/InTheHeartOfTheSea.jpg" onclick="showModal('In The Heart Of The Sea', 'InTheHeartOfTheSea.jpg')">
+                 src="assets/img/movies/InTheHeartOfTheSea.jpg"
+                 onclick="showModal('In The Heart Of The Sea', 'InTheHeartOfTheSea.jpg')">
 
             <p>Movie<br>2015</p>
         </div>
@@ -352,13 +356,15 @@
         </div>
         <div class="col-md-2">
             <img class="img-responsive geneva" style="width: 150px; height: 220px; "
-                 src="assets/img/movies/TheBoyAndTheWorld.jpg" onclick="showModal('The Boy And The World', 'TheBoyAndTheWorld.jpg')">
+                 src="assets/img/movies/TheBoyAndTheWorld.jpg"
+                 onclick="showModal('The Boy And The World', 'TheBoyAndTheWorld.jpg')">
 
             <p>The Boy And The World<br>2012</p>
         </div>
         <div class="col-md-2">
             <img class="img-responsive geneva" style="width: 150px; height: 220px; "
-                 src="assets/img/movies/TheGoodDinosaur.jpg" onclick="showModal('The Good Dinosaur', 'TheGoodDinosaur.jpg')">
+                 src="assets/img/movies/TheGoodDinosaur.jpg"
+                 onclick="showModal('The Good Dinosaur', 'TheGoodDinosaur.jpg')">
 
             <p>The Good Dinosaur<br>2015</p>
         </div>
@@ -368,25 +374,29 @@
     <div class="row">
         <div class="col-md-2">
             <img class="img-responsive geneva" style="width: 150px; height: 220px; "
-                 src="assets/img/movies/TheHungerGames_MockingJayPart2.jpg" onclick="showModal('The Hunger Games - Mocking Jay Part 2', 'TheHungerGames_MockingJayPart2.jpg')">
+                 src="assets/img/movies/TheHungerGames_MockingJayPart2.jpg"
+                 onclick="showModal('The Hunger Games - Mocking Jay Part 2', 'TheHungerGames_MockingJayPart2.jpg')">
 
             <p>The Hunger Games - Mocking Jay Part 2<br>2015</p>
         </div>
         <div class="col-md-2">
             <img class="img-responsive geneva" style="width: 150px; height: 220px; "
-                 src="assets/img/movies/TheLadyInTheVan.jpg" onclick="showModal('The Lady In The Van', 'TheLadyInTheVan.jpg')">
+                 src="assets/img/movies/TheLadyInTheVan.jpg"
+                 onclick="showModal('The Lady In The Van', 'TheLadyInTheVan.jpg')">
 
             <p>The Lady In The Van<br>2014</p>
         </div>
         <div class="col-md-2">
             <img class="img-responsive geneva" style="width: 150px; height: 220px; "
-                 src="assets/img/movies/TheNightBefore.jpg" onclick="showModal('The Night Before', 'TheNightBefore.jpg')">
+                 src="assets/img/movies/TheNightBefore.jpg"
+                 onclick="showModal('The Night Before', 'TheNightBefore.jpg')">
 
             <p>The Night Before<br>2013</p>
         </div>
         <div class="col-md-2">
             <img class="img-responsive geneva" style="width: 150px; height: 220px; "
-                 src="assets/img/movies/ThePeanutsMovie.jpg" onclick="showModal('The Peanuts Movie', 'ThePeanutsMovie.jpg')">
+                 src="assets/img/movies/ThePeanutsMovie.jpg"
+                 onclick="showModal('The Peanuts Movie', 'ThePeanutsMovie.jpg')">
 
             <p>The Peanuts Movie<br>2015</p>
         </div>
@@ -428,8 +438,8 @@
 </script>
 
 <script type="text/javascript">
-    function showMo(title,pic) {
-        dialogAlert('test', genMovieModal(title,pic))
+    function showMo(title, pic) {
+        dialogAlert('test', genMovieModal(title, pic))
     }
 
     $(".dropdown-menu li a").click(function () {
@@ -437,18 +447,18 @@
         $(this).parents('.dropdown').find('.dropdown-toggle').html(selText + '<span class="caret"></span>');
     });
     function browseMovies() {
-        $("#content").visibility=false;
+        $("#content").visibility = false;
         var urlArray = window.location.pathname.split('/');
-        if (urlArray[urlArray.length-1] != "libraryMovies.html"){
+        if (urlArray[urlArray.length - 1] != "libraryMovies.html") {
             window.location.href = "libraryMovies.html";
         }
     }
 
     function browseTvs() {
         var urlArray = window.location.pathname.split('/');
-        console.log(urlArray[urlArray.length-1]);
-        if (urlArray[urlArray.length-1] != "libraryTvs.html"){
-            console.log(urlArray[urlArray.length-1]);
+        console.log(urlArray[urlArray.length - 1]);
+        if (urlArray[urlArray.length - 1] != "libraryTvs.html") {
+            console.log(urlArray[urlArray.length - 1]);
             window.location.href = "libraryTvs.html";
         }
     }
@@ -457,40 +467,39 @@
 
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/streamer.js"></script>
- <script src="assets/js/screenfull.js"></script>
+<script src="assets/js/screenfull.js"></script>
 
 <script type="text/javascript">
 
 
+    $("#closeplayer").click(function () {
+        var target = $("#player");
 
-        $("#closeplayer").click(function(){
-       var target = $("#player");
-
-        if(screenfull.enabled){
+        if (screenfull.enabled) {
             screenfull.exit();
             target.hide();
         }
     });
 
 
-    $("#genreselect a").each(function(index){
-      var genre = $(this).text();
-      $(this).click(function(){
-        $("#movielistings").empty();
-        $("#movielistings").append(genListHtml(genreMovieSelect(genre)));
-      })
+    $("#genreselect a").each(function (index) {
+        var genre = $(this).text();
+        $(this).click(function () {
+            $("#movielistings").empty();
+            $("#movielistings").append(genListHtml(genreMovieSelect(genre)));
+        })
     });
 
     localStorage.setItem('activelisting', JSON.stringify(JSON.parse(localStorage.getItem('movielist'))));
 
-    $("#sortyear").click(function(){
+    $("#sortyear").click(function () {
 
         $("#movielistings").empty();
         $("#movielistings").append(genListHtml(sortyear()));
 
     });
 
-    $("#sorttitle").click(function(){
+    $("#sorttitle").click(function () {
 
         $("#movielistings").empty();
         $("#movielistings").append(genListHtml(sorttitle()));
