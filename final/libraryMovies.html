@@ -32,6 +32,74 @@
 
 <body>
 
+ <div id="player" style="display:none">
+        <!-- Navigation -->
+          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+             <div class="container">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   <ul class="nav navbar-nav">
+                      <li>
+                         <a id="titlename">MOVIE NAME</a>
+                      </li>
+                   </ul>
+                   <ul class="nav navbar-nav navbar-right">
+                      <li>
+                         <a id="closeplayer" href="#">
+                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                         </a>
+                      </li>
+                   </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+             </div>
+             <!-- /.container -->
+          </nav>
+          <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+             <div class="container">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   <ul class="nav navbar-nav" style="
+                      /* margin-top: 5px; */
+                      ">
+                      <li style="
+                         margin: 5px;
+                         ">
+                         <button class="btn btn-default"><span class="
+                            glyphicon glyphicon-backward"></span></button>
+                      </li>
+                      <li style="
+                         margin: 5px;
+                         ">
+                         <button class="btn btn-default"><span class="
+                            glyphicon glyphicon-play"></span></button>
+                      </li>
+                      <li style="
+                         margin: 5px;
+                         ">
+                         <button class="btn btn-default"><span class="
+                            glyphicon glyphicon-forward"></span></button>
+                      </li>
+                      <li>
+                         <div class="bs-component" style="
+                            ">
+                            <div class="progress progress-striped active" style="
+                               width: 100vh;
+                               margin-top: 16px;
+                               background-color: black;
+                               ">
+                               <div class="progress-bar" style="width: 84%;"></div>
+                            </div>
+                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+                         </div>
+                      </li>
+                   </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+             </div>
+             <!-- /.container -->
+          </nav>
+    </div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -140,119 +208,187 @@
 
     <div class="row">
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/americanBeauty.jpg" onclick="showModal('American Beauty', 'americanBeauty.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>American Beauty<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/Creed.jpg" onclick="showModal('Creed', 'Creed.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Creed<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/DonVerdean.jpg" onclick="showModal('Don Verdean', 'DonVerdean.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Don Verdean<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/forrestgump.jpg" onclick="showModal('Forrest Gump', 'forrestgump.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Forrest Gump<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/gladiator.jpg" onclick="showModal('Gladiator', 'gladiator.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Gladiator<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/hobbit.jpg" onclick="showModal('Hobbit', 'hobbit.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Hobbit<br>Year</p>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/InTheHeartOfTheSea.jpg" onclick="showModal('In The Heart Of The Sea', 'InTheHeartOfTheSea.jpg')">
 
             <p>Movie<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/Legend.jpg" onclick="showModal('Legend', 'Legend.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Legend<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/matrix.jpg" onclick="showModal('matrix', 'matrix.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Matrix<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/memento.jpg" onclick="showModal('Memento', 'memento.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Memento<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/priavteryan.jpg" onclick="showModal('Private Ryan', 'priavteryan.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Private Ryan<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/pulp.jpg" onclick="showModal('Pulp', 'pulp.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Pulp<br>Year</p>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/pyscho.jpg" onclick="showModal('Pyscho', 'pyscho.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Pyscho<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/residentevil.jpg" onclick="showModal('Resident Evil', 'residentevil.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Resident Evil<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/simpsons.jpg" onclick="showModal('Simpsons', 'simpsons.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Simpsons<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/slevin.jpg" onclick="showModal('Slevin', 'slevin.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Slevin<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/Spectre.jpg" onclick="showModal('Spectre', 'Spectre.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Spectre<br>Year</p>
         </div>
         <div class="col-md-2">
-            <img class="img-responsive" style="width: 150px; height: 220px; "
-                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/spiritAway.jpg" onclick="showModal('Spirit Away', 'spiritAway.jpg')">
 
-            <p>Movie<br>Year</p>
+            <p>Spirit Away<br>Year</p>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/Spotlight.jpg" onclick="showModal('Spotlight', 'Spotlight.jpg')">
+
+            <p>Spotlight<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/starship.jpg" onclick="showModal('Starship Tropper', 'starship.jpg')">
+
+            <p>Starship Troppe<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/startrek.jpg" onclick="showModal('Star Trek', 'startrek.jpg')">
+
+            <p>Star Trek<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/TheBigShort.jpg" onclick="showModal('The Big Short', 'TheBigShort.jpg')">
+
+            <p>The Big Short<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/TheBoyAndTheWorld.jpg" onclick="showModal('The Boy And The World', 'TheBoyAndTheWorld.jpg')">
+
+            <p>The Boy And The World<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/TheGoodDinosaur.jpg" onclick="showModal('The Good Dinosaur', 'TheGoodDinosaur.jpg')">
+
+            <p>The Good Dinosaur<br>Year</p>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/TheHungerGames_MockingJayPart2.jpg" onclick="showModal('The Hunger Games - Mocking Jay Part 2', 'TheHungerGames_MockingJayPart2.jpg')">
+
+            <p>The Hunger Games - Mocking Jay Part 2<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/TheLadyInTheVan.jpg" onclick="showModal('The Lady In The Van', 'TheLadyInTheVan.jpg')">
+
+            <p>The Lady In The Van<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/TheNightBefore.jpg" onclick="showModal('The Night Before', 'TheNightBefore.jpg')">
+
+            <p>The Night Before<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive geneva" style="width: 150px; height: 220px; "
+                 src="assets/img/movies/ThePeanutsMovie.jpg" onclick="showModal('The Peanuts Movie', 'ThePeanutsMovie.jpg')">
+
+            <p>The Peanuts Movie<br>Year</p>
+        </div>
+
     </div>
 
     <!-- Jumbotron Header -->
@@ -297,6 +433,10 @@
 </script>
 
 <script type="text/javascript">
+    function showModal(title,pic) {
+        dialogAlert('test', genMovieModal(title,pic))
+    }
+
     $(".dropdown-menu li a").click(function () {
         var selText = $(this).html();
         $(this).parents('.dropdown').find('.dropdown-toggle').html(selText + '<span class="caret"></span>');
@@ -310,7 +450,9 @@
 
     function browseTvs() {
         var urlArray = window.location.pathname.split('/');
+        console.log(urlArray[urlArray.length-1]);
         if (urlArray[urlArray.length-1] != "libraryTvs.html"){
+            console.log(urlArray[urlArray.length-1]);
             window.location.href = "libraryTvs.html";
         }
     }
@@ -319,12 +461,20 @@
 
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/streamer.js"></script>
+ <script src="assets/js/screenfull.js"></script>
 
 <script type="text/javascript">
 
-    $("#test").click(function () {
-        dialogAlert('asdf', genMovieModal("Avengers: Age of Ultron", "avengers-2.jpg"))
-    })
+
+
+        $("#closeplayer").click(function(){
+       var target = $("#player");
+
+        if(screenfull.enabled){
+            screenfull.exit();
+            target.hide();
+        }
+    });
 
 
 </script>
