@@ -365,6 +365,13 @@
         }
     });
 
+    if (screenfull.enabled) {
+      document.addEventListener(screenfull.raw.fullscreenchange, function () {
+        if (!screenfull.isFullscreen)
+          $("#player").hide();
+      });
+    }
+
 
 
     </script>
