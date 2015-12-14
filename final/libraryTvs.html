@@ -129,9 +129,9 @@
                     <a href="libraryTvShow.html" onclick="browseTvs(); return false" id="browseTvsLink">TV Series</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" id="genreselect" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    <a href="#"class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Genre<span class="caret"></span></a>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <ul  id="genreselect"  class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#">All</a></li>
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Biography</a></li>
@@ -292,6 +292,8 @@
     }
     $("#genreselect a").each(function (index) {
         var genre = $(this).text();
+
+        console.log(genre);
         $(this).click(function () {
             $("#tvListings").empty();
             $("#tvListings").append(genTvListHtml(genreTvSelect(genre)));
