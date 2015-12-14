@@ -32,318 +32,346 @@
 
 <body>
 
-    <div id="player" style="display:none">
-        <!-- Navigation -->
-          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-             <div class="container">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav">
-                      <li>
-                         <a id="titlename">MOVIE NAME</a>
-                      </li>
-                   </ul>
-                   <ul class="nav navbar-nav navbar-right">
-                      <li>
-                         <a id="closeplayer" href="#">
-                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                         </a>
-                      </li>
-                   </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-             </div>
-             <!-- /.container -->
-          </nav>
-          <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-             <div class="container">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav" style="
+<div id="player" style="display:none">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="titlename">MOVIE NAME</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="closeplayer" href="#">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="
                       /* margin-top: 5px; */
                       ">
-                      <li style="
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-backward"></span></button>
-                      </li>
-                      <li style="
+                    </li>
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-play"></span></button>
-                      </li>
-                      <li style="
+                    </li>
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-forward"></span></button>
-                      </li>
-                      <li>
-                         <div class="bs-component" style="
+                    </li>
+                    <li>
+                        <div class="bs-component" style="
                             ">
                             <div class="progress progress-striped active" style="
                                width: 100vh;
                                margin-top: 16px;
                                background-color: black;
                                ">
-                               <div class="progress-bar" style="width: 84%;"></div>
+                                <div class="progress-bar" style="width: 84%;"></div>
                             </div>
-                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-                         </div>
-                      </li>
-                   </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-             </div>
-             <!-- /.container -->
-          </nav>
-    </div>
-
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" >Streamer</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="libraryMovies.html">Movies</a>
-                    </li>
-                    <li>
-                        <a href="libraryTvs.html">TV Series</a>
+                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt;
+                                &gt;</div>
+                        </div>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#">
-                          <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="#">Account</a></li>
-                        <li><a href="#">Logout</a></li>
-                      </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="title, actor, genre...">
-                    </div>
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                </form>
-                
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
+</div>
 
-    <!-- Page Content -->
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Streamer</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="libraryMovies.html">Movies</a>
+                </li>
+                <li>
+                    <a href="libraryTvs.html">TV Series</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </a>
+                </li>
 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="title, actor, genre...">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"
+                                                                    aria-hidden="true"></span></button>
+            </form>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
 <!-- Page Content -->
 <div class="container">
-    <div class="col-md-12 text-left"><h3>Continue Watching</h3></div>
-    <div class="col-md-12">
-        <div class="carousel slide" id="historyCarousel">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/TheNightBefore.jpg" id ="TheNightBefore" onclick="showModal('The Night Before', 'TheNightBefore.jpg')"></a>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-md-12 text-left"><h3>Continue Watching</h3></div>
+        <div class="col-md-12">
+            <div class="carousel slide" id="historyCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/TheNightBefore.jpg" id="TheNightBefore"
+                                                      onclick="showModal('The Night Before', 'TheNightBefore.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/slevin.jpg" id="slevin"
+                                                      onclick="showModal('Lucky Number Slevin', 'slevin.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/hobbit.jpg" id="hobbit"
+                                                      onclick="showModal('The Hobbit', 'hobbit.jpg')"></a></div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/forrestgump.jpg" id="forrestgump"
+                                                      onclick="showModal('Forrest Gump', 'forrestgump.jpg')"></a></div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/pulp.jpg" id="pulp"
+                                                      onclick="showModal('Pulp Fiction', 'pulp.jpg')"></a>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/slevin.jpg" id ="slevin" onclick="showModal('Lucky Number Slevin', 'slevin.jpg')"></a>
+                <a class="left carousel-control" href="#historyCarousel" data-slide="prev"><i
+                        class="glyphicon glyphicon-chevron-left"></i></a>
+                <a class="right carousel-control" href="#historyCarousel" data-slide="next"><i
+                        class="glyphicon glyphicon-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="col-md-12 text-left"><h3>Suggested</h3></div>
+        <div class="col-md-12">
+            <div class="carousel slide" id="suggestedCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/BleedingHeart.jpg" id="BleedingHeart"
+                                                      onclick="showModal('Bleeding Heart', 'BleedingHeart.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/gladiator.jpg" id="gladiator"
+                                                      onclick="showModal('Gladiator', 'gladiator.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/matrix.jpg" id="matrix"
+                                                      onclick="showModal('Matrix', 'matrix.jpg')"></a></div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/memento.jpg" id="memento"
+                                                      onclick="showModal('Memento', 'memento.jpg')"></a></div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/priavteryan.jpg" id="priavteryan"
+                                                      onclick="showModal('Saving Priavte Ryan', 'priavteryan.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/residentevil.jpg" id="residentevil"
+                                                      onclick="showModal('Resident Evil', 'residentevil.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/starship.jpg" id="starship"
+                                                      onclick="showModal('Starship Troopers', 'starship.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/startrek.jpg" id="startrek"
+                                                      onclick="showModal('Startrek', 'startrek.jpg')"></a>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/hobbit.jpg" id ="hobbit" onclick="showModal('The Hobbit', 'hobbit.jpg')"></a></div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/forrestgump.jpg" id ="forrestgump" onclick="showModal('Forrest Gump', 'forrestgump.jpg')"></a></div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/pulp.jpg" id ="pulp" onclick="showModal('Pulp Fiction', 'pulp.jpg')"></a>
+                <a class="left carousel-control" href="#suggestedCarousel" data-slide="prev"><i
+                        class="glyphicon glyphicon-chevron-left"></i></a>
+                <a class="right carousel-control" href="#suggestedCarousel" data-slide="next"><i
+                        class="glyphicon glyphicon-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="col-md-12 text-left"><h3>Popular</h3></div>
+        <div class="col-md-12">
+            <div class="carousel slide" id="popularCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/americanBeauty.jpg" id="americanBeauty"
+                                                      onclick="showModal('American Beauty', 'americanBeauty.jpg')"></a>
+                        </div>
                     </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/Creed.jpg" id="creed"
+                                                      onclick="showModal('Creed', 'Creed.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/DonVerdean.jpg" id="DonVerdean"
+                                                      onclick="showModal('Don Verdean', 'DonVerdean.jpg')"></a></div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/InTheHeartOfTheSea.jpg"
+                                                      id="InTheHeartOfTheSea"
+                                                      onclick="showModal('In The Heart Of The Sea', 'InTheHeartOfTheSea.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/Krampus.jpg" id="Krampus"
+                                                      onclick="showModal('Krampus', 'Krampus.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/Legend.jpg" id="Legend"
+                                                      onclick="showModal('Legend', 'Legend.jpg')"></a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/Spectre.jpg" id="Spectre"
+                                                      onclick="showModal('Spectre', 'Spectre.jpg')"></a></div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3"><a><img class="img-responsive geneva" style="width: 214px; height: 317px;"
+                                                      src="assets/img/movies/Spotlight.jpg" id="Spotlight"
+                                                      onclick="showModal('Spotlight', 'Spotlight.jpg')"></a>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#popularCarousel" data-slide="prev"><i
+                        class="glyphicon glyphicon-chevron-left"></i></a>
+                <a class="right carousel-control" href="#popularCarousel" data-slide="next"><i
+                        class="glyphicon glyphicon-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
                 </div>
             </div>
-            <a class="left carousel-control" href="#historyCarousel" data-slide="prev"><i
-                    class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" href="#historyCarousel" data-slide="next"><i
-                    class="glyphicon glyphicon-chevron-right"></i></a>
-        </div>
+        </footer>
+
     </div>
+    <!-- /.container -->
 
-    <hr>
+    <!-- jQuery -->
+    <script src="assets/js/jquery.js"></script>
 
-    <div class="col-md-12 text-left"><h3>Suggested</h3></div>
-    <div class="col-md-12">
-        <div class="carousel slide" id="suggestedCarousel">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/BleedingHeart.jpg" id ="BleedingHeart" onclick="showModal('Bleeding Heart', 'BleedingHeart.jpg')"></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/gladiator.jpg" id ="gladiator" onclick="showModal('Gladiator', 'gladiator.jpg')"></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/matrix.jpg" id ="matrix" onclick="showModal('Matrix', 'matrix.jpg')"></a></div>
-                </div>
-                <div class="item"> 
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/memento.jpg" id ="memento" onclick="showModal('Memento', 'memento.jpg')"></a></div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/priavteryan.jpg" id ="priavteryan" onclick="showModal('Saving Priavte Ryan', 'priavteryan.jpg')"></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/residentevil.jpg" id ="residentevil" onclick="showModal('Resident Evil', 'residentevil.jpg')"></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/starship.jpg" id ="starship" onclick="showModal('Starship Troopers', 'starship.jpg')"></a></div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva"  style="width: 214px; height: 317px;"
-                                                            src="assets/img/movies/startrek.jpg" id ="startrek" onclick="showModal('Startrek', 'startrek.jpg')"></a>
-                    </div>
-                </div>
-            </div>
-            <a class="left carousel-control" href="#suggestedCarousel" data-slide="prev"><i
-                    class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" href="#suggestedCarousel" data-slide="next"><i
-                    class="glyphicon glyphicon-chevron-right"></i></a>
-        </div>
-    </div>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script>
 
-    <hr>
-
-    <div class="col-md-12 text-left"><h3>Popular</h3></div>
-    <div class="col-md-12">
-        <div class="carousel slide" id="popularCarousel">
-            <div class="carousel-inner">
-                <div class="item active">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                           src="assets/img/movies/americanBeauty.jpg" id ="americanBeauty" onclick="showModal('American Beauty', 'americanBeauty.jpg')"></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                           src="assets/img/movies/Creed.jpg" id ="americanBeauty" onclick="showModal('Creed', 'Creed.jpg')"></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                           src="assets/img/movies/DonVerdean.jpg" id="DonVerdean" onclick="showModal('Don Verdean', 'DonVerdean.jpg')"></a></div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                           src="assets/img/movies/InTheHeartOfTheSea.jpg" id="InTheHeartOfTheSea" onclick="showModal('In The Heart Of The Sea', 'InTheHeartOfTheSea.jpg')"></a></div>
-                </div>
-                <div class="item"> 
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                           src="assets/img/movies/Krampus.jpg" id="Krampus" onclick="showModal('Krampus', 'Krampus.jpg')"></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                           src="assets/img/movies/Legend.jpg" id="Legend" onclick="showModal('Legend', 'Legend.jpg')"></a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                           src="assets/img/movies/Spectre.jpg" id="Spectre" onclick="showModal('Spectre', 'Spectre.jpg')"></a></div>
-                </div> 
-                <div class="item">
-                    <div class="col-xs-3"><a ><img class="img-responsive geneva" style="width: 214px; height: 317px;"
-                                                           src="assets/img/movies/Spotlight.jpg" id="Spotlight" onclick="showModal('Spotlight', 'Spotlight.jpg')"></a>
-                    </div>
-                </div>
-            </div>
-            <a class="left carousel-control" href="#popularCarousel" data-slide="prev"><i
-                    class="glyphicon glyphicon-chevron-left"></i></a>
-            <a class="right carousel-control" href="#popularCarousel" data-slide="next"><i
-                    class="glyphicon glyphicon-chevron-right"></i></a>
-        </div>
-    </div>
-
-    <hr>
-
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-            </div>
-        </div>
-    </footer>
-
-</div>
-<!-- /.container -->
-
-<!-- jQuery -->
-<script src="assets/js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="assets/js/bootstrap.min.js"></script>
-<script>
-
-    function showModal(title,pic) {
-      dialogAlert('asdf', genMovieModal(title,pic))
-    }
-
-    $('#myCarousel').carousel({
-        interval: 4000
-    })
-
-    $('.carousel .item').each(function () {
-        var next = $(this).next();
-        if (!next.length) {
-            next = $(this).siblings(':first');
+        function showModal(title, pic) {
+            dialogAlert('asdf', genMovieModal(title, pic))
         }
-        next.children(':first-child').clone().appendTo($(this));
 
-        for (var i = 0; i < 2; i++) {
-            next = next.next();
+        $('#myCarousel').carousel({
+            interval: 4000
+        })
+
+        $('.carousel .item').each(function () {
+            var next = $(this).next();
             if (!next.length) {
                 next = $(this).siblings(':first');
             }
-
             next.children(':first-child').clone().appendTo($(this));
-        }
-    });
-</script>
+
+            for (var i = 0; i < 2; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = $(this).siblings(':first');
+                }
+
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
 
 
     <script src="assets/js/jquery-ui.js"></script>
@@ -352,82 +380,325 @@
 
     <script type="text/javascript">
 
-    $("#test").click(function(){
-    	dialogAlert('asdf', genTvModal("Avengers: Age of Ultron", "avengers-2.jpg"))
-    })
+        $("#test").click(function () {
+            dialogAlert('asdf', genTvModal("Avengers: Age of Ultron", "avengers-2.jpg"))
+        })
 
-    $("#closeplayer").click(function(){
-       var target = $("#player");
+        $("#closeplayer").click(function () {
+            var target = $("#player");
 
-        if(screenfull.enabled){
-            screenfull.exit();
-            target.hide();
+            if (screenfull.enabled) {
+                screenfull.exit();
+                target.hide();
+            }
+        });
+
+        if (screenfull.enabled) {
+            document.addEventListener(screenfull.raw.fullscreenchange, function () {
+                if (!screenfull.isFullscreen)
+                    $("#player").hide();
+            });
         }
-    });
-
-    if (screenfull.enabled) {
-      document.addEventListener(screenfull.raw.fullscreenchange, function () {
-        if (!screenfull.isFullscreen)
-          $("#player").hide();
-      });
-    }
 
 
-    if (localStorage.getItem("movielist")){
-      //
-      var movielist = [
-        {
-          title: "American Beauty",
-          year : "2000",
-          genre : "action",
-          img : "americanBeauty"
-        },{
-          title: "American Beauty",
-          year : "2000",
-          genre : "action",
-          img : "americanBeauty"
-        },{
-          title: "American Beauty",
-          year : "2000",
-          genre : "action",
-          img : "americanBeauty"
-        },{
-          title: "American Beauty",
-          year : "2000",
-          genre : "action",
-          img : "americanBeauty"
-        },{
-          title: "American Beauty",
-          year : "2000",
-          genre : "action",
-          img : "americanBeauty"
-        },{
-          title: "American Beauty",
-          year : "2000",
-          genre : "action",
-          img : "americanBeauty"
-        },{
-          title: "American Beauty",
-          year : "2000",
-          genre : "action",
-          img : "americanBeauty"
-        },{
-          title: "American Beauty",
-          year : "2000",
-          genre : "action",
-          img : "americanBeauty"
-        },{
-          title: "American Beauty",
-          year : "2000",
-          genre : "action",
-          img : "americanBeauty"
-        }
-      ];
+       // if (localStorage.getItem("tvlist")) {
+            //
+            var tvlist = [
+                {
+                    title: "Arrow",
+                    year: "2000",
+                    genre: "action",
+                    img: "arrow"
+                }, {
+                    title: "Banshee",
+                    year: "2014",
+                    genre: "action",
+                    img: "banshee"
+                }, {
+                    title: "Breaking Bad",
+                    year: "2008",
+                    genre: "crime",
+                    img: "breakingbad"
+                }, {
+                    title: "Brink",
+                    year: "1994",
+                    genre: "crime",
+                    img: "brink"
+                }, {
+                    title: "Carter",
+                    year: "2009",
+                    genre: "thriller",
+                    img: "carter"
+                }, {
+                    title: "Castle",
+                    year: "2000",
+                    genre: "action",
+                    img: "castle"
+                }, {
+                    title: "Flash",
+                    year: "1993",
+                    genre: "sci-fi",
+                    img: "flash"
+                }, {
+                    title: "Friends",
+                    year: "1999",
+                    genre: "action",
+                    img: "friends"
+                }, {
+                    title: "IZombie",
+                    year: "2015",
+                    genre: "thriller",
+                    img: "izombie"
+                }, {
+                    title: "Office",
+                    year: "2008",
+                    genre: "drama",
+                    img: "office"
+                }, {
+                    title: "Suits",
+                    year: "2015",
+                    genre: "drama",
+                    img: "suits"
+                }, {
+                    title: "Super Natural",
+                    year: "2015",
+                    genre: "thriller",
+                    img: "supernatural"
+                }, {
+                    title: "salem",
+                    year: "2004",
+                    genre: "thriller",
+                    img: "salem"
+                }, {
+                    title: "Agents of S.H.I.E.L.D",
+                    year: "2002",
+                    genre: "crime",
+                    img: "shield"
+                }, {
+                    title: "American Horror Story - Hotel",
+                    year: "2010",
+                    genre: "horror",
+                    img: "horrorstory"
+                }, {
+                    title: "Marco Polo",
+                    year: "2009",
+                    genre: "action",
+                    img: "marco"
+                }, {
+                    title: "Sleepy Hollow",
+                    year: "2015",
+                    genre: "action",
+                    img: "sleepy"
+                }, {
+                    title: "The Mentalist",
+                    year: "2002",
+                    genre: "drama",
+                    img: "mental"
+                }, {
+                    title: "Friends",
+                    year: "2000",
+                    genre: "family",
+                    img: "friends"
+                }, {
+                    title: "Dexter",
+                    year: "2006",
+                    genre: "crime",
+                    img: "dexter"
+                }, {
+                    title: "Daredevil",
+                    year: "2014",
+                    genre: "crime",
+                    img: "daredevil"
+                }, {
+                    title: "Agent Carter",
+                    year: "2013",
+                    genre: "action",
+                    img: "carter"
+                }, {
+                    title: "Sense 8",
+                    year: "1989",
+                    genre: "drama",
+                    img: "sense8"
+                }, {
+                    title: "True Detective",
+                    year: "2014",
+                    genre: "crime",
+                    img: "truedetective"
+                }, {
+                    title: "Wayward Pines",
+                    year: "2015",
+                    genre: "romance",
+                    img: "wayward"
+                }, {
+                    title: "Robot",
+                    year: "2014",
+                    genre: "crime",
+                    img: "robot"
+                }, {
+                    title: "Gotham",
+                    year: "2015",
+                    genre: "action",
+                    img: "gotham"
+                }, {
+                    title: "Forever",
+                    year: "2015",
+                    genre: "drama",
+                    img: "forever"
+                }
+            ];
 
-      localStorage.setItem("movielist", JSON.stringify(movielist));
+            localStorage.setItem("tvlist", JSON.stringify(tvlist));
+        //}
 
-    }
+       // if (localStorage.getItem("movielist")) {
+            //
+            var movielist = [
+                {
+                    title: "American Beauty",
+                    year: "2000",
+                    genre: "action",
+                    img: "americanBeauty"
+                }, {
+                    title: "The Hobbit",
+                    year: "2014",
+                    genre: "action",
+                    img: "hobbit"
+                }, {
+                    title: "Forrest Gump",
+                    year: "1999",
+                    genre: "drama",
+                    img: "forrestgump"
+                }, {
+                    title: "Pulp Fiction",
+                    year: "1994",
+                    genre: "crime",
+                    img: "pulp"
+                }, {
+                    title: "Bleeding Heart",
+                    year: "2009",
+                    genre: "thriller",
+                    img: "BleedingHeart"
+                }, {
+                    title: "Gladiator",
+                    year: "2000",
+                    genre: "thriller",
+                    img: "gladiator"
+                }, {
+                    title: "Matrix",
+                    year: "1993",
+                    genre: "sci-fi",
+                    img: "matrix"
+                }, {
+                    title: "Memento",
+                    year: "1999",
+                    genre: "action",
+                    img: "memento"
+                }, {
+                    title: "Creed",
+                    year: "2015",
+                    genre: "sports",
+                    img: "Creed"
+                }, {
+                    title: "Don Verdean",
+                    year: "2008",
+                    genre: "drama",
+                    img: "DonVerdean"
+                }, {
+                    title: "Krampus",
+                    year: "2015",
+                    genre: "horror",
+                    img: "Krampus"
+                }, {
+                    title: "Legend",
+                    year: "2015",
+                    genre: "sports",
+                    img: "Legend"
+                }, {
+                    title: "Saving Private Ryan",
+                    year: "2004",
+                    genre: "action",
+                    img: "priavteryan"
+                }, {
+                    title: "American Pyscho",
+                    year: "2002",
+                    genre: "horror",
+                    img: "pyscho"
+                }, {
+                    title: "Simpsons",
+                    year: "2010",
+                    genre: "family",
+                    img: "simpsons"
+                }, {
+                    title: "Lucky Number Slevin",
+                    year: "2009",
+                    genre: "comedy",
+                    img: "slevin"
+                }, {
+                    title: "Spectre",
+                    year: "2015",
+                    genre: "crime",
+                    img: "Spectre"
+                }, {
+                    title: "Spirted Away",
+                    year: "2002",
+                    genre: "family",
+                    img: "spiritAway"
+                }, {
+                    title: "Spotlight",
+                    year: "2015",
+                    genre: "documentry",
+                    img: "Spotlight"
+                }, {
+                    title: "Starship Troopers",
+                    year: "1989",
+                    genre: "sci-fi",
+                    img: "starship"
+                }, {
+                    title: "Startrek",
+                    year: "2014",
+                    genre: "musicals",
+                    img: "startrek"
+                }, {
+                    title: "The Big Short",
+                    year: "2013",
+                    genre: "musicals",
+                    img: "TheBigShort"
+                }, {
+                    title: "The Boy And The World",
+                    year: "2010",
+                    genre: "documentry",
+                    img: "TheBoyAndTheWorld"
+                }, {
+                    title: "The Good Dinosaur",
+                    year: "2014",
+                    genre: "family",
+                    img: "TheGoodDinosaur"
+                }, {
+                    title: "The Hunger Games Mocking Jay Part2",
+                    year: "2015",
+                    genre: "romance",
+                    img: "TheHungerGames_MockingJayPart2"
+                }, {
+                    title: "The Lady In The Van",
+                    year: "2014",
+                    genre: "romance",
+                    img: "TheLadyInTheVan"
+                }, {
+                    title: "TheNightBefore",
+                    year: "2015",
+                    genre: "comedy",
+                    img: "TheNightBefore"
+                }, {
+                    title: "The Peanuts Movie",
+                    year: "2015",
+                    genre: "family",
+                    img: "ThePeanutsMovie"
+                }
+            ];
 
+            localStorage.setItem("movielist", JSON.stringify(movielist));
+
+       // }
 
 
     </script>

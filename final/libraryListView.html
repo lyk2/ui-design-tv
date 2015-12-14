@@ -32,104 +32,107 @@
 
 <body>
 
-   <div id="player" style="display:none">
-        <!-- Navigation -->
-          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-             <div class="container">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav">
-                      <li>
-                         <a id="titlename">MOVIE NAME</a>
-                      </li>
-                   </ul>
-                   <ul class="nav navbar-nav navbar-right">
-                      <li>
-                         <a id="closeplayer" href="#">
-                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                         </a>
-                      </li>
-                   </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-             </div>
-             <!-- /.container -->
-          </nav>
-          <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-             <div class="container">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav" style="
+<div id="player" style="display:none">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="titlename">MOVIE NAME</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="closeplayer" href="#">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="
                       /* margin-top: 5px; */
                       ">
-                      <li style="
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-backward"></span></button>
-                      </li>
-                      <li style="
+                    </li>
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-play"></span></button>
-                      </li>
-                      <li style="
+                    </li>
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-forward"></span></button>
-                      </li>
-                      <li>
-                         <div class="bs-component" style="
+                    </li>
+                    <li>
+                        <div class="bs-component" style="
                             ">
                             <div class="progress progress-striped active" style="
                                width: 100vh;
                                margin-top: 16px;
                                background-color: black;
                                ">
-                               <div class="progress-bar" style="width: 84%;"></div>
+                                <div class="progress-bar" style="width: 84%;"></div>
                             </div>
-                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-                         </div>
-                      </li>
-                   </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-             </div>
-             <!-- /.container -->
-          </nav>
-    </div>
-
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" >Streamer</a>
+                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt;
+                                &gt;</div>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="#">Movies</a>
-                    </li>
-                    <li>
-                        <a href="#">TV Series</a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Genre<span class="caret"></span></a>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</div>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Streamer</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Movies</a>
+                </li>
+                <li>
+                    <a href="#">TV Series</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Genre<span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#">All</a></li>
                         <li><a href="#">Action</a></li>
                         <li><a href="#">Biography</a></li>
@@ -145,352 +148,407 @@
                         <li><a href="#">Sci-Fi</a></li>
                         <li><a href="#">Sports</a></li>
                         <li><a href="#">Thriller</a></li>
-                      </ul>
-                    </li>
+                    </ul>
+                </li>
 
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sort by<span class="caret"></span></a>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Sort by<span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#">Popularity</a></li>
                         <li><a href="#">Trending</a></li>
                         <li><a href="#">Last Added</a></li>
                         <li><a href="#">Year</a></li>
                         <li><a href="#">Title</a></li>
                         <li><a href="#">Rating</a></li>
-                      </ul>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <span class="glyphicon glyphicon-th" aria-hidden="true" onclick="location.href = 'libraryMovies.html';"></span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                          <span class="glyphicon glyphicon-menu-hamburger" style="color:#2a9fd6" aria-hidden="true" ></span>
-                        </a>
-                    </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    
-                    <li>
-                        <a href="#">
-                          <span class="glyphicon glyphicon-heart redhover" aria-hidden="true"></span>
-                        </a>
-                    </li>
-                    
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
-                      <ul class="dropdown-menu">
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-th" aria-hidden="true"
+                              onclick="location.href = 'libraryMovies.html';"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-menu-hamburger" style="color:#2a9fd6"
+                              aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-heart redhover" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu">
                         <li><a href="#">Account</a></li>
                         <li><a href="#">Logout</a></li>
-                      </ul>
-                    </li>
-                </ul>
-                <form class="navbar-form navbar-right" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="title, actor, genre...">
-                    </div>
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                </form>
-                
-            </div>
-            <!-- /.navbar-collapse -->
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="title, actor, genre...">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"
+                                                                    aria-hidden="true"></span></button>
+            </form>
+
         </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/americanBeauty.jpg" onclick="showModal('American Beauty', 'americanBeauty.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('American Beauty', 'americanBeauty.jpg')"> American Beauty </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/BleedingHeart.jpg" onclick="showModal('Bleeding Heart', 'BleedingHeart.jpg')">
-          </div> 
-          <div class="col-md-3" > 
-            <h4 class="meraj" onclick="showModal('Bleeding Heart', 'BleedingHeart.jpg')"> Bleeding Heart </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/Creed.jpg" onclick="showModal('Creed', 'Creed.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('Creed', 'Creed.jpg')"> Creed </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/DonVerdean.jpg" onclick="showModal('Don Verdean', 'DonVerdean.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('Don Verdean', 'DonVerdean.jpg')"> Don Verdean </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/forrestgump.jpg" onclick="showModal('Forrest Gump', 'forrestgump.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('Forrest Gump', 'forrestgump.jpg')"> Forrest Gump </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/Gladiator.jpg" onclick="showModal('Gladiator', 'gladiator.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('Gladiator', 'gladiator.jpg')"> Gladiator </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/Hobbit.jpg" onclick="showModal('Hobbit', 'hobbit.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('Hobbit', 'hobbit.jpg')"> Hobbit </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/InTheHeartOfTheSea.jpg" onclick="showModal('In The Heart Of The Sea', 'InTheHeartOfTheSea.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('Hobbit', 'hobbit.jpg')"> In the Heart of the Sea </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/Krampus.jpg" onclick="showModal('Krampus', 'Krampus.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('Krampus', 'Krampus.jpg')"> Krampus </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/Legend.jpg" onclick="showModal('Legend', 'Legend.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('Legend', 'Legend.jpg')"> Legend </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/Matrix.jpg" onclick="showModal('matrix', 'matrix.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('matrix', 'matrix.jpg')"> Matrix </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
-        <div class="row" style="padding-bottom: 30px">
-          <div class="col-md-1"> 
-            <img class="img-responsive geneva" style="width: 75px; height: 100px; "src="assets/img/movies/Memento.jpg" onclick="showModal('Memento', 'memento.jpg')">
-          </div> 
-          <div class="col-md-3"> 
-            <h4 class="meraj" onclick="showModal('Memento', 'memento.jpg')"> Memento </h4>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>2010</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>148min</p>
-          </div>
-          <div class="col-md-1" style="margin-top: 15px"> 
-            <p>PG-13</p>
-          </div>
-          <div class="col-md-3" style="margin-top: 15px"> 
-            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star-empty"></span></span>
-          </div>
-          <div class="col-md-2" style="margin-top: 8px"> 
-            <button type="button" class="btn btn-primary">Play Now</button>
-          </div>
-        </div>
-
+        <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; "
+                 src="assets/img/movies/americanBeauty.jpg"
+                 onclick="showModal('American Beauty', 'americanBeauty.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('American Beauty', 'americanBeauty.jpg')"> American Beauty </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; "
+                 src="assets/img/movies/BleedingHeart.jpg" onclick="showModal('Bleeding Heart', 'BleedingHeart.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Bleeding Heart', 'BleedingHeart.jpg')"> Bleeding Heart </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; " src="assets/img/movies/Creed.jpg"
+                 onclick="showModal('Creed', 'Creed.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Creed', 'Creed.jpg')"> Creed </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; "
+                 src="assets/img/movies/DonVerdean.jpg" onclick="showModal('Don Verdean', 'DonVerdean.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Don Verdean', 'DonVerdean.jpg')"> Don Verdean </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; "
+                 src="assets/img/movies/forrestgump.jpg" onclick="showModal('Forrest Gump', 'forrestgump.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Forrest Gump', 'forrestgump.jpg')"> Forrest Gump </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; "
+                 src="assets/img/movies/Gladiator.jpg" onclick="showModal('Gladiator', 'gladiator.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Gladiator', 'gladiator.jpg')"> Gladiator </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; " src="assets/img/movies/Hobbit.jpg"
+                 onclick="showModal('Hobbit', 'hobbit.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Hobbit', 'hobbit.jpg')"> Hobbit </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; "
+                 src="assets/img/movies/InTheHeartOfTheSea.jpg"
+                 onclick="showModal('In The Heart Of The Sea', 'InTheHeartOfTheSea.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Hobbit', 'hobbit.jpg')"> In the Heart of the Sea </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; " src="assets/img/movies/Krampus.jpg"
+                 onclick="showModal('Krampus', 'Krampus.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Krampus', 'Krampus.jpg')"> Krampus </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; " src="assets/img/movies/Legend.jpg"
+                 onclick="showModal('Legend', 'Legend.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Legend', 'Legend.jpg')"> Legend </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; " src="assets/img/movies/Matrix.jpg"
+                 onclick="showModal('matrix', 'matrix.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('matrix', 'matrix.jpg')"> Matrix </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+    <div class="row" style="padding-bottom: 30px">
+        <div class="col-md-1">
+            <img class="img-responsive geneva" style="width: 75px; height: 100px; " src="assets/img/movies/Memento.jpg"
+                 onclick="showModal('Memento', 'memento.jpg')">
+        </div>
+        <div class="col-md-3">
+            <h4 class="meraj" onclick="showModal('Memento', 'memento.jpg')"> Memento </h4>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>2010</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>148min</p>
+        </div>
+        <div class="col-md-1" style="margin-top: 15px">
+            <p>PG-13</p>
+        </div>
+        <div class="col-md-3" style="margin-top: 15px">
+            <span style=" color: yellow; "> <span class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star"></span> <span class="glyphicon glyphicon-star"></span><span
+                    style="margin-left:5px" class="glyphicon glyphicon-star"></span> <span
+                    class="glyphicon glyphicon-star-empty"></span></span>
+        </div>
+        <div class="col-md-2" style="margin-top: 8px">
+            <button type="button" class="btn btn-primary">Play Now</button>
+        </div>
+    </div>
+
+</div>
 
 </div>
 <!-- /.container -->
@@ -524,8 +582,8 @@
 </script>
 
 <script type="text/javascript">
-    function showModal(title,pic) {
-        dialogAlert('test', genMovieModal(title,pic))
+    function showModal(title, pic) {
+        dialogAlert('test', genMovieModal(title, pic))
     }
 
     $(".dropdown-menu li a").click(function () {
@@ -534,16 +592,16 @@
     });
     function browseMovies() {
         var urlArray = window.location.pathname.split('/');
-        if (urlArray[urlArray.length-1] != "libraryMovies.html"){
+        if (urlArray[urlArray.length - 1] != "libraryMovies.html") {
             window.location.href = "libraryMovies.html";
         }
     }
 
     function browseTvs() {
         var urlArray = window.location.pathname.split('/');
-        console.log(urlArray[urlArray.length-1]);
-        if (urlArray[urlArray.length-1] != "libraryTvs.html"){
-            console.log(urlArray[urlArray.length-1]);
+        console.log(urlArray[urlArray.length - 1]);
+        if (urlArray[urlArray.length - 1] != "libraryTvs.html") {
+            console.log(urlArray[urlArray.length - 1]);
             window.location.href = "libraryTvs.html";
         }
     }
@@ -552,16 +610,15 @@
 
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/streamer.js"></script>
- <script src="assets/js/screenfull.js"></script>
+<script src="assets/js/screenfull.js"></script>
 
 <script type="text/javascript">
 
 
+    $("#closeplayer").click(function () {
+        var target = $("#player");
 
-        $("#closeplayer").click(function(){
-       var target = $("#player");
-
-        if(screenfull.enabled){
+        if (screenfull.enabled) {
             screenfull.exit();
             target.hide();
         }

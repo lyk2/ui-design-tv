@@ -135,25 +135,35 @@ function genMovielibrary() {
 
     var list = JSON.parse(localStorage.getItem('movielist'));
 
-    return genListHtml(list);
+    localStorage.setItem('activelisting', localStorage.getItem('movielist'))
+
+    return genMovieListHtml(list);
 
 };
 
-function genListHtml(list) {
+function genTvlibrary() {
+
+    var list = JSON.parse(localStorage.getItem('tvlist'));
+
+    localStorage.setItem('activelisting', localStorage.getItem('tvlist'))
+
+    return genTvListHtml(list);
+
+};
+
+function genMovieListHtml(list) {
 
     var html = ""
     var co = 0;
 
     for (var i = 0; i < list.length; i++) {
 
-        console.log(co);
-
         var item = list[i]
 
         if (co == 0)
             html += '<div class="row">';
 
-        html += genTitle(item.title, item.img, item.year);
+        html += genMovieTitle(item.title, item.img, item.year);
 
         if (co == 5) {
             html += '</div>';    
@@ -171,9 +181,121 @@ function genListHtml(list) {
 
 };
 
+function genTvListHtml(list) {
 
-function genTitle (title, img, year) {
+    var html = ""
+    var co = 0;
 
-    var html = '<div class="col-md-2"> <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/movies/'+img+'.jpg" onclick="showModal("'+title+'", "'+img+'.jpg")"> <p>'+title+'<br>'+year+'</p> </div>'
+    for (var i = 0; i < list.length; i++) {
+
+        var item = list[i]
+
+        if (co == 0)
+            html += '<div class="row">';
+
+        html += genTvTitle(item.title, item.img, item.year);
+
+        if (co == 5) {
+            html += '</div>';
+            co = -1
+        }
+
+        co++
+    }
+
+    if (co != -1)
+        html += '</div>';
+
+    return html;
+
+
+};
+
+function genMovieTitle (title, img, year) {
+
+    var html = '<div class="col-md-2"> <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/movies/'+img+'.jpg" onclick="showModal(\''+title+'\', \''+img+'.jpg\')"> <p>'+title+'<br>'+year+'</p> </div>'
     return html
+}
+
+function genTvTitle (title, img, year) {
+
+    var html = '<div class="col-md-2"> <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/'+img+'.jpg" onclick="showModal(\''+title+'\', \''+img+'.jpg\')"> <p>'+title+'<br>'+year+'</p> </div>'
+    return html
+}
+
+function genreMovieSelect (genre) {
+
+    var list = JSON.parse(localStorage.getItem('movielist'));
+
+    var newlist = []
+
+    for (var i = 0; i < list.length; i ++){
+        var item = list[i];
+
+        if (item.genre.toLowerCase() == genre.toLowerCase())
+            newlist.push(item);
+    }
+
+
+    localStorage.setItem('activelisting', JSON.stringify(newlist));
+
+    if (genre=="All")
+        return list;
+
+    return newlist;
+
+
+}
+
+function moviesearch (input) {
+
+    var list = JSON.parse(localStorage.getItem('movielist'));
+    var newlist = []
+
+    for (var i = 0; i < list.length; i ++){
+        var item = list[i];
+
+        var a = item.title.toLowerCase()
+        var b = input.toLowerCase()
+
+        if (a.indexOf(b) >= 0)
+            newlist.push(item);
+    }
+
+    localStorage.setItem('activelisting', JSON.stringify(newlist));
+
+    return newlist;
+
+
+}
+
+function sortyear() {
+
+    var list = JSON.parse(localStorage.getItem('activelisting'));
+    list.sort(compareyear);
+    return list;
+};
+
+
+function sorttitle() {
+
+    var list = JSON.parse(localStorage.getItem('activelisting'));
+    list.sort(compareyear);
+    return list;
+};
+
+function compareyear(a,b) {
+  if (a.year < b.year)
+    return -1;
+  if (a.year > b.year)
+    return 1;
+  return 0;
+}
+
+function comparetitle(a,b) {
+  if (a.title < b.title)
+    return -1;
+  if (a.title > b.title)
+    return 1;
+  return 0;
 }
