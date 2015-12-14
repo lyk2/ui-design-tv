@@ -29,7 +29,7 @@ function genTvModal (title, img) {
     html += "<div class='container' style='width:100%'>"
     html +=     "<div class='row'>" +
                     "<div class='col-xs-2'> " +
-                        '<img id="art" class="art" src="assets/img/movie/'+img+'" style="width: 90%;margin-top:22px">' +
+                        '<img id="art" class="art" src="assets/img/tv-shows/'+img+'" style="width: 90%;margin-top:22px">' +
                         '<span class="glyphicon glyphicon-play-circle boxart" style=" margin-left: -58%; font-size: 50px; "></span>' + 
                     "</div>" + 
                     "<div class='col-xs-10'> " +
