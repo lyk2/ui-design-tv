@@ -373,6 +373,154 @@
     }
 
 
+    if (localStorage.getItem("tvlist")){
+        //
+        var tvlist = [
+            {
+                title: "Arrow",
+                year : "2000",
+                genre : "action",
+                img : "arrow"
+            },{
+                title: "Banshee",
+                year : "2014",
+                genre : "action",
+                img : "banshee"
+            },{
+                title: "Breaking Bad",
+                year : "2008",
+                genre : "crime",
+                img : "breakingbad"
+            },{
+                title: "Brink",
+                year : "1994",
+                genre : "crime",
+                img : "brink"
+            },{
+                title: "Carter",
+                year : "2009",
+                genre : "thriller",
+                img : "carter"
+            },{
+                title: "Castle",
+                year : "2000",
+                genre : "action",
+                img : "castle"
+            },{
+                title: "Flash",
+                year : "1993",
+                genre : "sci-fi",
+                img : "flash"
+            },{
+                title: "Friends",
+                year : "1999",
+                genre : "action",
+                img : "friends"
+            },{
+                title: "IZombie",
+                year : "2015",
+                genre : "thriller",
+                img : "izombie"
+            },{
+                title: "Office",
+                year : "2008",
+                genre : "drama",
+                img : "office"
+            },{
+                title: "Suits",
+                year : "2015",
+                genre : "drama",
+                img : "suits"
+            },{
+                title: "Super Natural",
+                year : "2015",
+                genre : "thriller",
+                img : "supernatural"
+            },{
+                title: "salem",
+                year : "2004",
+                genre : "thriller",
+                img : "salem"
+            },{
+                title: "Agents of S.H.I.E.L.D",
+                year : "2002",
+                genre : "crime",
+                img : "shield"
+            },{
+                title: "American Horror Story - Hotel",
+                year : "2010",
+                genre : "horror",
+                img : "horrorstory"
+            },{
+                title: "Marco Polo",
+                year : "2009",
+                genre : "action",
+                img : "marco"
+            },{
+                title: "Sleepy Hollow",
+                year : "2015",
+                genre : "action",
+                img : "sleepy"
+            },{
+                title: "The Mentalist",
+                year : "2002",
+                genre : "drama",
+                img : "mental"
+            },{
+                title: "Friends",
+                year : "2000",
+                genre : "family",
+                img : "friends"
+            },{
+                title: "Dexter",
+                year : "2006",
+                genre : "crime",
+                img : "dexter"
+            },{
+                title: "Daredevil",
+                year : "2014",
+                genre : "crime",
+                img : "daredevil"
+            },{
+                title: "Agent Carter",
+                year : "2013",
+                genre : "action",
+                img : "carter"
+            },{
+                title: "Sense 8",
+                year : "1989",
+                genre : "drama",
+                img : "sense8"
+            },{
+                title: "True Detective",
+                year : "2014",
+                genre : "crime",
+                img : "truedetective"
+            },{
+                title: "Wayward Pines",
+                year : "2015",
+                genre : "romance",
+                img : "wayward"
+            },{
+                title: "Robot",
+                year : "2014",
+                genre : "crime",
+                img : "robot"
+            },{
+                title: "Gotham",
+                year : "2015",
+                genre : "action",
+                img : "gothom"
+            },{
+                title: "Forever",
+                year : "2015",
+                genre : "drama",
+                img : "forever"
+            }
+        ];
+
+        localStorage.setItem("tvlist", JSON.stringify(tvlist));
+
     if (localStorage.getItem("movielist")){
       //
       var movielist = [
@@ -517,7 +665,6 @@
           genre : "family",
           img : "ThePeanutsMovie"
         }
-
       ];
 
       localStorage.setItem("movielist", JSON.stringify(movielist));
