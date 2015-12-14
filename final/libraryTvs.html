@@ -288,14 +288,16 @@
     });
     function browseMovies() {
         var urlArray = window.location.pathname.split('/');
-        if (urlArray[urlArray.length-1] != "library.html"){
+        if (urlArray[urlArray.length-1] != "libraryMovies.html"){
             window.location.href = "libraryMovies.html";
         }
     }
 
     function browseTvs() {
         var urlArray = window.location.pathname.split('/');
-        if (urlArray[urlArray.length-1] != "library.html"){
+        console.log(urlArray[urlArray.length-1]);
+        if (urlArray[urlArray.length-1] != "libraryTvs.html"){
+            console.log(urlArray[urlArray.length-1]);
             window.location.href = "libraryTvs.html";
         }
     }
