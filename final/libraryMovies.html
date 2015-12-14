@@ -204,7 +204,7 @@
 </nav>
 
 <!-- Page Content -->
-<div class="container">
+<div id="movielistings" class="container">
 
     <div class="row">
         <div class="col-md-2">
@@ -476,6 +476,17 @@
         }
     });
 
+        if (screenfull.enabled) {
+      document.addEventListener(screenfull.raw.fullscreenchange, function () {
+        if (!screenfull.isFullscreen)
+          $("#player").hide();
+      });
+    }
+
+
+    $("#movielistings").empty();
+
+    $("#movielistings").append(genMovielibrary());
 
 </script>
 

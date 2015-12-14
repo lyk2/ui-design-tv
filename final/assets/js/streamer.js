@@ -127,3 +127,53 @@ function dialogAlert(title, html, action) {
         }
     });
 };
+
+
+
+
+function genMovielibrary() {
+
+    var list = JSON.parse(localStorage.getItem('movielist'));
+
+    return genListHtml(list);
+
+};
+
+function genListHtml(list) {
+
+    var html = ""
+    var co = 0;
+
+    for (var i = 0; i < list.length; i++) {
+
+        console.log(co);
+
+        var item = list[i]
+
+        if (co == 0)
+            html += '<div class="row">';
+
+        html += genTitle(item.title, item.img, item.year);
+
+        if (co == 5) {
+            html += '</div>';    
+            co = -1
+        }
+
+        co++
+    }
+
+    if (co != -1)
+        html += '</div>';
+
+    return html;
+
+
+};
+
+
+function genTitle (title, img, year) {
+
+    var html = '<div class="col-md-2"> <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/movies/'+img+'.jpg" onclick="showModal("'+title+'", "'+img+'.jpg")"> <p>'+title+'<br>'+year+'</p> </div>'
+    return html
+}
