@@ -332,7 +332,7 @@
     $("#search").click(function(){
       var input = $("#searchtext").val();
       $("#movielistings").empty();
-    $("#movielistings").append(moviesearch(input));
+    $("#movielistings").append(genMovieListHtml(moviesearch(input)));
     });
 
 </script>
