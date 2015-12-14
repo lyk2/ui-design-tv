@@ -196,7 +196,7 @@
                     <input id="searchtext" type="text" class="form-control" placeholder="title, actor, genre...">
                 </div>
                 <button id="search" class="btn btn-default"><span class="glyphicon glyphicon-search"
-                                                                    aria-hidden="true"></span></button>
+                                                                  aria-hidden="true"></span></button>
             </div>
 
         </div>
@@ -290,17 +290,16 @@
     });
 
     if (screenfull.enabled) {
-            document.addEventListener(screenfull.raw.fullscreenchange, function () {
-                if (!screenfull.isFullscreen)
-                    $("#player").hide();
-            });
-        }
+        document.addEventListener(screenfull.raw.fullscreenchange, function () {
+            if (!screenfull.isFullscreen)
+                $("#player").hide();
+        });
+    }
 
 
-        function showModal(title, pic) {
-            dialogAlert('asdf', genMovieModal(title, pic))
-        }
-
+    function showModal(title, pic) {
+        dialogAlert('asdf', genMovieModal(title, pic))
+    }
 
 
     $("#genreselect a").each(function (index) {
@@ -331,17 +330,17 @@
     $("#movielistings").append(genMovielibrary());
 
 
-    $("#search").click(function(){
-      var input = $("#searchtext").val();
-      $("#movielistings").empty();
-    $("#movielistings").append(genMovieListHtml(moviesearch(input)));
+    $("#search").click(function () {
+        var input = $("#searchtext").val();
+        $("#movielistings").empty();
+        $("#movielistings").append(genMovieListHtml(moviesearch(input)));
     });
 
     $("#searchtext").keyup(function (e) {
-    if (e.keyCode == 13) {
-        $('#search').trigger('click');
-    }
-});
+        if (e.keyCode == 13) {
+            $('#search').trigger('click');
+        }
+    });
 
 </script>
 
