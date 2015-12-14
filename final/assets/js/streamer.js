@@ -203,6 +203,35 @@ function genreMovieSelect (genre) {
 
 }
 
+function moviesearch (input) {
+
+    var list = JSON.parse(localStorage.getItem('movielist'));
+
+    console.log(input);
+    var newlist = []
+
+    for (var i = 0; i < list.length; i ++){
+        var item = list[i];
+
+        var a = item.title.toLowerCase()
+        var b = input.toLowerCase()
+
+        console.log(a.indexOf(b) >= 0);
+
+        if (a.indexOf(b) >= 0)
+            newlist.push(item);
+    }
+
+    console.log(newlist);
+
+    localStorage.setItem('activelisting', JSON.stringify(newlist));
+
+
+    return newlist;
+
+
+}
+
 function sortyear() {
 
     var list = JSON.parse(localStorage.getItem('activelisting'));
