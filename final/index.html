@@ -365,6 +365,69 @@
         }
     });
 
+    if (screenfull.enabled) {
+      document.addEventListener(screenfull.raw.fullscreenchange, function () {
+        if (!screenfull.isFullscreen)
+          $("#player").hide();
+      });
+    }
+
+
+    if (localStorage.getItem("movielist")){
+      //
+      var movielist = [
+        {
+          title: "American Beauty",
+          year : "2000",
+          genre : "action",
+          img : "americanBeauty"
+        },{
+          title: "American Beauty",
+          year : "2000",
+          genre : "action",
+          img : "americanBeauty"
+        },{
+          title: "American Beauty",
+          year : "2000",
+          genre : "action",
+          img : "americanBeauty"
+        },{
+          title: "American Beauty",
+          year : "2000",
+          genre : "action",
+          img : "americanBeauty"
+        },{
+          title: "American Beauty",
+          year : "2000",
+          genre : "action",
+          img : "americanBeauty"
+        },{
+          title: "American Beauty",
+          year : "2000",
+          genre : "action",
+          img : "americanBeauty"
+        },{
+          title: "American Beauty",
+          year : "2000",
+          genre : "action",
+          img : "americanBeauty"
+        },{
+          title: "American Beauty",
+          year : "2000",
+          genre : "action",
+          img : "americanBeauty"
+        },{
+          title: "American Beauty",
+          year : "2000",
+          genre : "action",
+          img : "americanBeauty"
+        }
+      ];
+
+      localStorage.setItem("movielist", JSON.stringify(movielist));
+
+    }
+
 
 
     </script>

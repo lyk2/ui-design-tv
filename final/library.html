@@ -272,6 +272,13 @@
     	dialogAlert('asdf', genMovieModal("Avengers: Age of Ultron", "avengers-2.jpg"))
     })
 
+    if (screenfull.enabled) {
+      document.addEventListener(screenfull.raw.fullscreenchange, function () {
+        if (!screenfull.isFullscreen)
+          $("#player").hide();
+      });
+    }
+
 
 
     </script>
