@@ -163,12 +163,12 @@
                 </li>
                 <li>
                     <a href="#">
-                        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-th" aria-hidden="true" ></span>
                     </a>
                 </li>
                 <li>
                     <a href="#">
-                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true" onclick="location.href = 'libraryListView.html';"></span>
                     </a>
                 </li>
             </ul>
@@ -204,7 +204,9 @@
 </nav>
 
 <!-- Page Content -->
-<div id="movielistings" class="container">
+
+<!-- grid view -->
+<div class="container">
 
     <div class="row">
         <div class="col-md-2">
@@ -391,15 +393,8 @@
 
     </div>
 
-    <!-- Jumbotron Header -->
-    <!-- <header class="jumbotron hero-spacer">
-        <h1>A Warm Welcome!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-        <p><a class="btn btn-primary btn-large" id="test">Call to action!</a>
-        </p>
-    </header> -->
-
 </div>
+
 
 </div>
 <!-- /.container -->
@@ -433,7 +428,7 @@
 </script>
 
 <script type="text/javascript">
-    function showModal(title,pic) {
+    function showMo(title,pic) {
         dialogAlert('test', genMovieModal(title,pic))
     }
 
@@ -476,17 +471,6 @@
         }
     });
 
-        if (screenfull.enabled) {
-      document.addEventListener(screenfull.raw.fullscreenchange, function () {
-        if (!screenfull.isFullscreen)
-          $("#player").hide();
-      });
-    }
-
-
-    $("#movielistings").empty();
-
-    $("#movielistings").append(genMovielibrary());
 
     $("#genreselect a").each(function(index){
       var genre = $(this).text();
