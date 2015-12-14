@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Streamer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="assets/css/heroic-features.css" rel="stylesheet">
+    <link href="assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="assets/css/streamer.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Streamer</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="libraryMovies.html" onclick="browseMovies(); return false" id="browseMoviesLink">Movies</a>
+                </li>
+                <li>
+                    <a href="libraryTvShow.html" onclick="browseTvs(); return false" id="browseTvsLink">TV Series</a>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Genre<span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">All</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Biography</a></li>
+                        <li><a href="#">Comedy</a></li>
+                        <li><a href="#">Crime</a></li>
+                        <li><a href="#">Documentary</a></li>
+                        <li><a href="#">Drama</a></li>
+                        <li><a href="#">Family</a></li>
+                        <li><a href="#">Horror</a></li>
+                        <li><a href="#">Musicals</a></li>
+                        <li><a href="#">Mystery</a></li>
+                        <li><a href="#">Romance</a></li>
+                        <li><a href="#">Sci-Fi</a></li>
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Thriller</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false">Sort by<span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a href="#">Popularity</a></li>
+                        <li><a href="#">Trending</a></li>
+                        <li><a href="#">Last Added</a></li>
+                        <li><a href="#">Year</a></li>
+                        <li><a href="#">Title</a></li>
+                        <li><a href="#">Rating</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li>
+                    <a href="#">
+                        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                       aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Account</a></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-right" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="title, actor, genre...">
+                </div>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"
+                                                                    aria-hidden="true"></span></button>
+            </form>
+
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+        <div class="col-md-2">
+            <img class="img-responsive" style="width: 150px; height: 220px; "
+                 src="http://ia.media-imdb.com/images/M/MV5BMTA2MzM5NTk4NTBeQTJeQWpwZ15BbWU4MDk0NjgyNDcx._V1_SX214_AL_.jpg">
+
+            <p>Movie<br>Year</p>
+        </div>
+    </div>
+
+    <!-- Jumbotron Header -->
+    <!-- <header class="jumbotron hero-spacer">
+        <h1>A Warm Welcome!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
+        <p><a class="btn btn-primary btn-large" id="test">Call to action!</a>
+        </p>
+    </header> -->
+
+</div>
+
+</div>
+<!-- /.container -->
+
+<!-- jQuery -->
+<script src="assets/js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="assets/js/bootstrap.min.js"></script>
+<script>
+    $('#myCarousel').carousel({
+        interval: 4000
+    })
+
+    $('.carousel .item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < 2; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+</script>
+
+<script type="text/javascript">
+    $(".dropdown-menu li a").click(function () {
+        var selText = $(this).html();
+        $(this).parents('.dropdown').find('.dropdown-toggle').html(selText + '<span class="caret"></span>');
+    });
+    function browseMovies() {
+        var urlArray = window.location.pathname.split('/');
+        if (urlArray[urlArray.length-1] != "library.html"){
+            window.location.href = "libraryMovies.html";
+        }
+    }
+
+    function browseTvs() {
+        var urlArray = window.location.pathname.split('/');
+        if (urlArray[urlArray.length-1] != "library.html"){
+            window.location.href = "libraryTvs.html";
+        }
+    }
+</script>
+
+
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/streamer.js"></script>
+
+<script type="text/javascript">
+
+    $("#test").click(function () {
+        dialogAlert('asdf', genMovieModal("Avengers: Age of Ultron", "avengers-2.jpg"))
+    })
+
+
+</script>
+
+</body>
+
+</html>
