@@ -32,6 +32,74 @@
 
 <body>
 
+    <div id="player" style="display:none">
+        <!-- Navigation -->
+          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+             <div class="container">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   <ul class="nav navbar-nav">
+                      <li>
+                         <a id="titlename">MOVIE NAME</a>
+                      </li>
+                   </ul>
+                   <ul class="nav navbar-nav navbar-right">
+                      <li>
+                         <a id="closeplayer" href="#">
+                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                         </a>
+                      </li>
+                   </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+             </div>
+             <!-- /.container -->
+          </nav>
+          <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+             <div class="container">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   <ul class="nav navbar-nav" style="
+                      /* margin-top: 5px; */
+                      ">
+                      <li style="
+                         margin: 5px;
+                         ">
+                         <button class="btn btn-default"><span class="
+                            glyphicon glyphicon-backward"></span></button>
+                      </li>
+                      <li style="
+                         margin: 5px;
+                         ">
+                         <button class="btn btn-default"><span class="
+                            glyphicon glyphicon-play"></span></button>
+                      </li>
+                      <li style="
+                         margin: 5px;
+                         ">
+                         <button class="btn btn-default"><span class="
+                            glyphicon glyphicon-forward"></span></button>
+                      </li>
+                      <li>
+                         <div class="bs-component" style="
+                            ">
+                            <div class="progress progress-striped active" style="
+                               width: 100vh;
+                               margin-top: 16px;
+                               background-color: black;
+                               ">
+                               <div class="progress-bar" style="width: 84%;"></div>
+                            </div>
+                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+                         </div>
+                      </li>
+                   </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+             </div>
+             <!-- /.container -->
+          </nav>
+    </div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -306,12 +374,22 @@
 
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/streamer.js"></script>
+   <script src="assets/js/screenfull.js"></script>
 
 <script type="text/javascript">
 
     $("#test").click(function () {
         dialogAlert('asdf', genMovieModal("Avengers: Age of Ultron", "avengers-2.jpg"))
     })
+
+        $("#closeplayer").click(function(){
+       var target = $("#player");
+
+        if(screenfull.enabled){
+            screenfull.exit();
+            target.hide();
+        }
+    });
 
 
 </script>
