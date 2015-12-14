@@ -32,74 +32,75 @@
 
 <body>
 
-    <div id="player" style="display:none">
-        <!-- Navigation -->
-          <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-             <div class="container">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav">
-                      <li>
-                         <a id="titlename">MOVIE NAME</a>
-                      </li>
-                   </ul>
-                   <ul class="nav navbar-nav navbar-right">
-                      <li>
-                         <a id="closeplayer" href="#">
-                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                         </a>
-                      </li>
-                   </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-             </div>
-             <!-- /.container -->
-          </nav>
-          <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-             <div class="container">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                   <ul class="nav navbar-nav" style="
+<div id="player" style="display:none">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a id="titlename">MOVIE NAME</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a id="closeplayer" href="#">
+                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav" style="
                       /* margin-top: 5px; */
                       ">
-                      <li style="
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-backward"></span></button>
-                      </li>
-                      <li style="
+                    </li>
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-play"></span></button>
-                      </li>
-                      <li style="
+                    </li>
+                    <li style="
                          margin: 5px;
                          ">
-                         <button class="btn btn-default"><span class="
+                        <button class="btn btn-default"><span class="
                             glyphicon glyphicon-forward"></span></button>
-                      </li>
-                      <li>
-                         <div class="bs-component" style="
+                    </li>
+                    <li>
+                        <div class="bs-component" style="
                             ">
                             <div class="progress progress-striped active" style="
                                width: 100vh;
                                margin-top: 16px;
                                background-color: black;
                                ">
-                               <div class="progress-bar" style="width: 84%;"></div>
+                                <div class="progress-bar" style="width: 84%;"></div>
                             </div>
-                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-                         </div>
-                      </li>
-                   </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-             </div>
-             <!-- /.container -->
-          </nav>
-    </div>
+                            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt;
+                                &gt;</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -128,7 +129,7 @@
                     <a href="libraryTvShow.html" onclick="browseTvs(); return false" id="browseTvsLink">TV Series</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    <a href="#" id="genreselect" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Genre<span class="caret"></span></a>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                         <li><a href="#">All</a></li>
@@ -204,112 +205,7 @@
 </nav>
 
 <!-- Page Content -->
-<div class="container">
-
-    <div class="row">
-        <div class="col-md-2">
-            <a><img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/wayward.jpg" id ="wayward" onclick="showModal('Wayward Pines', 'wayward.jpg')"></a>
-
-            <p>Wayward Pines<br>2010</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/twinpeaks.jpg" id ="wayward" onclick="showModal('Twin Peaks', 'twinpeaks.jpg')">
-
-            <p>Twin Peaks<br>1994</p>
-        </div>
-        <div class="col-md-2">
-                <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/truedetective.jpg" id ="truedetective" onclick="showModal('True Detective', 'truedetective.jpg')">
-
-            <p>True Detective<br>2014</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/supernatural.jpg" id ="supernatural" onclick="showModal('Supernatural', 'supernatural.jpg')">
-
-            <p>Supernatural<br>2008</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/suits.jpg" id ="suits" onclick="showModal('Suits', 'suits.jpg')">
-            <p>Suits<br>2011</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/sleepy.jpg" id ="sleepy" onclick="showModal('The Night Before', 'sleepy.jpg')">
-            <p>Sleepy Hollow<br>2007</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/shield.jpg" id ="shield" onclick="showModal('Agents of Shield', 'shield.jpg')">
-
-            <p>Agents of Shield<br>2014</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/sense8.jpg" id ="sense8" onclick="showModal('Sense8', 'sense8.jpg')">
-
-            <p>Sense8<br>2010</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/salem.jpg" id ="salem" onclick="showModal('Salem', 'salem.jpg')">
-
-            <p>Salem<br>2010</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/office.jpg" id ="office" onclick="showModal('The Office', 'office.jpg')">
-
-            <p>The Office<br>2008</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/robot.jpg" id ="robot" onclick="showModal('Mr Robot', 'robot.jpg')">
-
-            <p>Mr Robot<br>2015</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/narcos.jpg" id ="narcos" onclick="showModal('Narcos', 'narcos.jpg')">
-
-            <p>Narcos<br>2015</p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/marco.jpg" id ="marco" onclick="showModal('Marco Polo', 'marco.jpg')">
-
-            <p>Marco Polo<br>2010</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/mental.jpg" id ="mental" onclick="showModal('Metalist', 'mental.jpg')">
-
-            <p>The Mentalist<br>2011</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/izombie.jpg" id ="izombie" onclick="showModal('IZombie', 'izombie.jpg')">
-
-            <p>IZombie<br>2014</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/horrorstory.jpg" id ="horrorstory" onclick="showModal('American Horror Story', 'horrorstory.jpg')">
-
-            <p>American Horror Story<br>2010</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/gotham.jpg" id ="gotham" onclick="showModal('Gotham', 'gotham.jpg')">
-
-            <p>Gotham<br>2014</p>
-        </div>
-        <div class="col-md-2">
-            <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/tv-shows/got.jpg" id ="got" onclick="showModal('Game Of Thrones', 'got.jpg')">
-
-            <p>Game Of Thrones<br>2010</p>
-        </div>
-    </div>
-
-    <!-- Jumbotron Header -->
-    <!-- <header class="jumbotron hero-spacer">
-        <h1>A Warm Welcome!</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-        <p><a class="btn btn-primary btn-large" id="test">Call to action!</a>
-        </p>
-    </header> -->
+<div class="container" id="tvListings">
 
 </div>
 
@@ -346,8 +242,8 @@
 
 <script type="text/javascript">
 
-    function showModal(title,pic) {
-      dialogAlert('test', genTvModal(title,pic))
+    function showModal(title, pic) {
+        dialogAlert('test', genTvModal(title, pic))
     }
 
     $(".dropdown-menu li a").click(function () {
@@ -356,16 +252,16 @@
     });
     function browseMovies() {
         var urlArray = window.location.pathname.split('/');
-        if (urlArray[urlArray.length-1] != "libraryMovies.html"){
+        if (urlArray[urlArray.length - 1] != "libraryMovies.html") {
             window.location.href = "libraryMovies.html";
         }
     }
 
     function browseTvs() {
         var urlArray = window.location.pathname.split('/');
-        console.log(urlArray[urlArray.length-1]);
-        if (urlArray[urlArray.length-1] != "libraryTvs.html"){
-            console.log(urlArray[urlArray.length-1]);
+        console.log(urlArray[urlArray.length - 1]);
+        if (urlArray[urlArray.length - 1] != "libraryTvs.html") {
+            console.log(urlArray[urlArray.length - 1]);
             window.location.href = "libraryTvs.html";
         }
     }
@@ -374,27 +270,52 @@
 
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/streamer.js"></script>
-   <script src="assets/js/screenfull.js"></script>
+<script src="assets/js/screenfull.js"></script>
 
 <script type="text/javascript">
 
 
-        $("#closeplayer").click(function(){
-       var target = $("#player");
+    $("#closeplayer").click(function () {
+        var target = $("#player");
 
-        if(screenfull.enabled){
+        if (screenfull.enabled) {
             screenfull.exit();
             target.hide();
         }
     });
 
-        if (screenfull.enabled) {
-      document.addEventListener(screenfull.raw.fullscreenchange, function () {
-        if (!screenfull.isFullscreen)
-          $("#player").hide();
-      });
+    if (screenfull.enabled) {
+        document.addEventListener(screenfull.raw.fullscreenchange, function () {
+            if (!screenfull.isFullscreen)
+                $("#player").hide();
+        });
     }
+    $("#genreselect a").each(function (index) {
+        var genre = $(this).text();
+        $(this).click(function () {
+            $("#tvListings").empty();
+            $("#tvListings").append(genTvListHtml(genreTvSelect(genre)));
+        })
+    });
 
+    localStorage.setItem('activelisting', JSON.stringify(JSON.parse(localStorage.getItem('tvlist'))));
+
+    $("#sortyear").click(function () {
+
+        $("#movielistings").empty();
+        $("#movielistings").append(genTvListHtml(sortyear()));
+
+    });
+
+    $("#sorttitle").click(function () {
+
+        $("#tvListings").empty();
+        $("#tvListings").append(genTvListHtml(sorttitle()));
+
+    });
+
+    $("#tvListings").empty();
+    $("#tvListings").append(genTvlibrary());
 
 </script>
 

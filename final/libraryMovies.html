@@ -499,7 +499,7 @@
         var genre = $(this).text();
         $(this).click(function () {
             $("#movielistings").empty();
-            $("#movielistings").append(genListHtml(genreMovieSelect(genre)));
+            $("#movielistings").append(genMovieListHtml(genreMovieSelect(genre)));
         })
     });
 
@@ -508,14 +508,14 @@
     $("#sortyear").click(function () {
 
         $("#movielistings").empty();
-        $("#movielistings").append(genListHtml(sortyear()));
+        $("#movielistings").append(genMovieListHtml(sortyear()));
 
     });
 
     $("#sorttitle").click(function () {
 
         $("#movielistings").empty();
-        $("#movielistings").append(genListHtml(sorttitle()));
+        $("#movielistings").append(genMovieListHtml(sorttitle()));
 
     });
 
