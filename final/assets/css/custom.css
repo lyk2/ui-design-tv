@@ -30,11 +30,7 @@
   height: 50px;
   font-weight: bold;
 }
-.dropdown-menu > .active > a,
-.dropdown-menu > .active > a:hover,
-.dropdown-menu > .active > a:focus {
-  color: #2a9fd6;
-  text-decoration: none;
-  outline: 0;
-  background-color: #2a9fd6;
+.redhover:active:hover,.redhover:active:focus, .redhover:focus, .redhover:hover {
+  color: #cc0000;
 }
+
