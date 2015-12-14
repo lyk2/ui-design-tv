@@ -135,6 +135,8 @@ function genMovielibrary() {
 
     var list = JSON.parse(localStorage.getItem('movielist'));
 
+    localStorage.setItem('activelisting', localStorage.getItem('movielist'))
+
     return genListHtml(list);
 
 };
@@ -145,8 +147,6 @@ function genListHtml(list) {
     var co = 0;
 
     for (var i = 0; i < list.length; i++) {
-
-        console.log(co);
 
         var item = list[i]
 
@@ -174,6 +174,31 @@ function genListHtml(list) {
 
 function genTitle (title, img, year) {
 
-    var html = '<div class="col-md-2"> <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/movies/'+img+'.jpg" onclick="showModal("'+title+'", "'+img+'.jpg")"> <p>'+title+'<br>'+year+'</p> </div>'
+    var html = '<div class="col-md-2"> <img class="img-responsive geneva" style="width: 150px; height: 220px; " src="assets/img/movies/'+img+'.jpg" onclick="showModal(\''+title+'\', \''+img+'.jpg\')"> <p>'+title+'<br>'+year+'</p> </div>'
     return html
+}
+
+
+function genreMovieSelect (genre) {
+
+    var list = JSON.parse(localStorage.getItem('movielist'));
+
+    var newlist = []
+
+    for (var i = 0; i < list.length; i ++){
+        var item = list[i];
+
+        if (item.genre.toLowerCase() == genre.toLowerCase())
+            newlist.push(item);
+    }
+
+
+    localStorage.setItem('activelisting', JSON.stringify(newlist));
+
+    if (genre=="All")
+        return list;
+
+    return newlist;
+
+
 }
