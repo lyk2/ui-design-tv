@@ -44,6 +44,8 @@ Play Oldest Movie
 2) Use "Sort by" drop down button and select "Year"
 3) Select first title
 
+Note: Only Sort By Year has been implemented for testing purposes.
+
 
 
 
