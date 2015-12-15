@@ -3,6 +3,8 @@
 		INSTRUCTIONS
 -------------------------------
 
+PLEASE USE CHROME BROWSER, RESOLUTION SET 1920x1080
+
 Open index.html to start webapp
 
 Naviagte to other pages using index.html
