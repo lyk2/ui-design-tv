@@ -123,10 +123,10 @@
                     <a href="index.html">Home</a>
                 </li>
                 <li>
-                    <a href="libraryMovies.html" onclick="browseMovies(); return false" id="browseMoviesLink">Movies</a>
+                    <a href="libraryMovies.html">Movies</a>
                 </li>
                 <li>
-                    <a href="libraryTvShow.html" onclick="browseTvs(); return false" id="browseTvsLink">TV Series</a>
+                    <a href="#" style="color:#2a9fd6">TV Series</a>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -162,16 +162,6 @@
                         <li><a href="#">Rating</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-th" aria-hidden="true"></span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                    </a>
-                </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
 
@@ -192,10 +182,10 @@
             </ul>
             <div class="navbar-form navbar-right" role="search">
                 <div class="form-group">
-                    <input id="searchtext"  type="text" class="form-control" placeholder="title, actor, genre...">
+                    <input id="searchtext" type="text" class="form-control" placeholder="title, actor, genre...">
                 </div>
-                <button id="search"  type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"
-                                                                    aria-hidden="true"></span></button>
+                <button id="search" type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"
+                                                                                aria-hidden="true"></span></button>
             </div>
 
         </div>
@@ -250,21 +240,6 @@
         var selText = $(this).html();
         $(this).parents('.dropdown').find('.dropdown-toggle').html(selText + '<span class="caret"></span>');
     });
-    function browseMovies() {
-        var urlArray = window.location.pathname.split('/');
-        if (urlArray[urlArray.length - 1] != "libraryMovies.html") {
-            window.location.href = "libraryMovies.html";
-        }
-    }
-
-    function browseTvs() {
-        var urlArray = window.location.pathname.split('/');
-        console.log(urlArray[urlArray.length - 1]);
-        if (urlArray[urlArray.length - 1] != "libraryTvs.html") {
-            console.log(urlArray[urlArray.length - 1]);
-            window.location.href = "libraryTvs.html";
-        }
-    }
 </script>
 
 
@@ -320,8 +295,14 @@
 
     $("#search").click(function () {
         var input = $("#searchtext").val();
+        var genre = $($("#genreselect").parent().find('a')[0]).text();
+        console.log(genre);
+        if (genre == "Genre") {
+            console.log("working")
+            genre = "All";
+        }
         $("#tvListings").empty();
-        $("#tvListings").append(genTvListHtml(tvsearch(input)));
+        $("#tvListings").append(genTvListHtml(tvsearch(genre, input)));
     });
 
     $("#searchtext").keyup(function (e) {

@@ -234,20 +234,20 @@ function genreMovieSelect(genre) {
             newlist.push(item);
     }
 
-
     localStorage.setItem('activelisting', JSON.stringify(newlist));
 
-    if (genre == "All")
+    if (genre == "All"){
+        localStorage.setItem('activelisting', JSON.stringify(list));
         return list;
-
+    }
     return newlist;
 
 
 }
 
-function moviesearch(input) {
-
-    var list = JSON.parse(localStorage.getItem('movielist'));
+function moviesearch(genre,input) {
+    genreMovieSelect(genre)
+    var list = JSON.parse(localStorage.getItem('activelisting'));
     var newlist = []
 
     for (var i = 0; i < list.length; i++) {
@@ -266,11 +266,9 @@ function moviesearch(input) {
 
 
 }
-
-
-function tvsearch(input) {
-
-    var list = JSON.parse(localStorage.getItem('tvlist'));
+function tvsearch(genre,input) {
+    genreTvSelect(genre);
+    var list = JSON.parse(localStorage.getItem('activelisting'));
     var newlist = []
 
     for (var i = 0; i < list.length; i++) {
@@ -306,8 +304,10 @@ function genreTvSelect(genre) {
 
     localStorage.setItem('activelisting', JSON.stringify(newlist));
 
-    if (genre == "All")
+    if (genre == "All") {
+        localStorage.setItem('activelisting', JSON.stringify(list));
         return list;
+    }
 
     return newlist;
 }
